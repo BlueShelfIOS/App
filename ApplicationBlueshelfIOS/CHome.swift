@@ -12,7 +12,7 @@ class CHome {
 
     
     func RequestPostConnection(Username: String, PassWord: String) -> Int {
-        var request = URLRequest(url: URL(string: "http://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
+        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
         request.httpMethod = "POST"
         let postString = "login=" + Username + "&password=" + PassWord
         request.httpBody = postString.data(using: .utf8)

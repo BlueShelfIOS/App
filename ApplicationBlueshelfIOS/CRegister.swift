@@ -36,7 +36,7 @@ class CRegister {
     }
     
     func RequestPostRegister(FirstName: String, LastName: String, Password: String, Email: String) -> Int {
-        var request = URLRequest(url: URL(string: "http://dev.blueshelf.fr/app_dev.php/api/users")!)
+        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/users")!)
         request.httpMethod = "POST"
         let postString = "firstName=" + FirstName + "&lastName=" + LastName + "&email=" + Email + "&password=" + Password
         request.httpBody = postString.data(using: .utf8)
