@@ -10,6 +10,7 @@ import Foundation
 
 class CHome {
 
+
     
     func RequestPostConnection(Username: String, PassWord: String) -> Int {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
@@ -29,8 +30,11 @@ class CHome {
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
                 ReturnCode = 201
-                let responseString = String(data: data, encoding: .utf8) // token
-                print("responseString = \(responseString)")
+                //let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
+                //String(data: data, encoding: .utf8) // token
+                //let data: Data
+                //print("responseString = \(responseString)")
+                self.Deserializer(data: data)
                 semaphore.signal()
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 400 {
@@ -41,5 +45,33 @@ class CHome {
         task.resume()
         semaphore.wait()
         return ReturnCode
+    }
+    
+    func Deserializer(data: Data)
+    {
+        let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
+        //String(data: data, encoding: .utf8) // token
+        print("responseString = \(responseString)")
+        if let dictionary = responseString as? [String: Any]
+        {
+            if let token = dictionary["value"] as? String {
+                print("Token = \(token)")
+                // access individual value in dictionary
+                
+            }
+            for (key, value) in dictionary {
+                print ("Key =")
+                print (key)
+                print ("Value =")
+                print(value)
+                /*if (key == "firstName"){
+                print("firstname =\(value)")
+                }
+                if (key == "lasttName"){
+                    print("lasttName =\(value)")
+                }*/
+               
+            }
+        }
     }
 }
