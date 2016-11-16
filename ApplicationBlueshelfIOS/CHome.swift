@@ -60,14 +60,18 @@ class CHome {
                 
             }
             if let nestedDictionary = dictionary["user"] as? [String: Any] {
-                for (key, value) in nestedDictionary {
-                    if (key == "firstName"){
-                        print("value =\(value)")
+                let firstname:String?
+                let lastname:String?
+                let email:String?
+                firstname = nestedDictionary["firstName"]  as? String
+                lastname = nestedDictionary["lasttName"] as? String
+                email = nestedDictionary["email"] as? String
+                print(firstname!)
+                print(lastname!)
+                print(email!)
                     }
                     
                     
                 }
             }
         }
-    }
-}

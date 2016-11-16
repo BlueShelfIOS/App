@@ -15,6 +15,7 @@
 		671954981DCCF37B0082D9AD /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954971DCCF37B0082D9AD /* CHome.swift */; };
 		6719549A1DCD26240082D9AD /* VRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954991DCD26240082D9AD /* VRegister.swift */; };
 		6719549C1DCD26380082D9AD /* CRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719549B1DCD26380082D9AD /* CRegister.swift */; };
+		6720EAB01DDC7046003CD432 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720EAAF1DDC7046003CD432 /* Model.swift */; };
 		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
 		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		671954971DCCF37B0082D9AD /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		671954991DCD26240082D9AD /* VRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRegister.swift; sourceTree = "<group>"; };
 		6719549B1DCD26380082D9AD /* CRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRegister.swift; sourceTree = "<group>"; };
+		6720EAAF1DDC7046003CD432 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
 		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				6719549B1DCD26380082D9AD /* CRegister.swift */,
 				C282702B1DDB44BC00DE0D4E /* VUser.swift */,
 				C282702D1DDB44D800DE0D4E /* CUser.swift */,
+				6720EAAF1DDC7046003CD432 /* Model.swift */,
 			);
 			path = ApplicationBlueshelfIOS;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				671954981DCCF37B0082D9AD /* CHome.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
 				C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */,
+				6720EAB01DDC7046003CD432 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
