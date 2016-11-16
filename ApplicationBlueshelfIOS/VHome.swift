@@ -42,12 +42,7 @@ class VHome: UIViewController {
             self.testlbl.text = "OK"
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VUser")
-
             self.present(vc, animated: true, completion: nil)
-            
-            //let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            //let uv = storyboard.instantiateViewController(withIdentifier: "VUser") as! VUser;
-            //navigationController?.pushViewController(uv, animated: true)
         }
         if resul == 400
         {
