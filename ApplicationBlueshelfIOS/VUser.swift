@@ -12,10 +12,22 @@ class VUser: UIViewController {
 
     @IBOutlet weak var Lbl_UserName: UILabel!
     @IBOutlet weak var Lbl_UserEmail: UILabel!
+    var ControlerUser = CUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let res = ControlerUser.RequestPostConnection(Token: ModelData.getToken())
+        
+        if res == 201
+        {
+            print("OK")
+        }
+        else
+        {
+            self.Lbl_UserName.text = ModelData.getFirstName() + " " + ModelData.getLastName()
+            self.Lbl_UserEmail.text = ModelData.getEmail()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -23,9 +35,7 @@ class VUser: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
+   /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

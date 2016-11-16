@@ -8,6 +8,8 @@
 
 import Foundation
 
+let ModelData = Model()
+
 class CHome {
 
 
@@ -56,6 +58,7 @@ class CHome {
         {
             if let token = dictionary["value"] as? String {
                 print("Token = \(token)")
+                ModelData.setToken(Token: token)
                 // access individual value in dictionary
                 
             }
@@ -66,6 +69,9 @@ class CHome {
                 firstname = nestedDictionary["firstName"]  as? String
                 lastname = nestedDictionary["lastName"] as? String
                 email = nestedDictionary["email"] as? String
+                ModelData.setFirstName(Firstname: firstname!)
+                ModelData.setLastName(Lastname: lastname!)
+                ModelData.setEmail(Email: email!)
                 print(firstname!)
                 print(lastname!)
                 print(email!)

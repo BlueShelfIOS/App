@@ -8,13 +8,13 @@
 
 import Foundation
 
-class User {
+class CUser {
     
     func RequestPostConnection(Token: String) -> Int {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user?_format=json")!)
+        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user")!)
         request.httpMethod = "GET"
         let postString = "X-Auth-Token=" + Token
-        request.httpBody = postString.data(using: .utf8)
+        request.value(forHTTPHeaderField: postString)
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)
@@ -35,8 +35,8 @@ class User {
                 //self.Deserializer(data: data)
                 semaphore.signal()
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 400 {
-                ReturnCode = 400
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
+                ReturnCode = 401
                 semaphore.signal()
             }
         }
