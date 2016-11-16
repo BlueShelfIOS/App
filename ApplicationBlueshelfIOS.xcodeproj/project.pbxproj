@@ -12,11 +12,11 @@
 		671954871DCC96040082D9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671954851DCC96040082D9AD /* Main.storyboard */; };
 		671954891DCC96040082D9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671954881DCC96040082D9AD /* Assets.xcassets */; };
 		6719548C1DCC96040082D9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6719548A1DCC96040082D9AD /* LaunchScreen.storyboard */; };
-		671954951DCCEB9C0082D9AD /* View in Resources */ = {isa = PBXBuildFile; fileRef = 671954931DCCEB9C0082D9AD /* View */; };
-		671954961DCCEB9C0082D9AD /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 671954941DCCEB9C0082D9AD /* Controller */; };
 		671954981DCCF37B0082D9AD /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954971DCCF37B0082D9AD /* CHome.swift */; };
 		6719549A1DCD26240082D9AD /* VRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954991DCD26240082D9AD /* VRegister.swift */; };
 		6719549C1DCD26380082D9AD /* CRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719549B1DCD26380082D9AD /* CRegister.swift */; };
+		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
+		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +27,11 @@
 		671954881DCC96040082D9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6719548B1DCC96040082D9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6719548D1DCC96040082D9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		671954931DCCEB9C0082D9AD /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
-		671954941DCCEB9C0082D9AD /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		671954971DCCF37B0082D9AD /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		671954991DCD26240082D9AD /* VRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRegister.swift; sourceTree = "<group>"; };
 		6719549B1DCD26380082D9AD /* CRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRegister.swift; sourceTree = "<group>"; };
+		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
+		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,6 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
-				671954931DCCEB9C0082D9AD /* View */,
-				671954941DCCEB9C0082D9AD /* Controller */,
 				671954811DCC96040082D9AD /* AppDelegate.swift */,
 				671954851DCC96040082D9AD /* Main.storyboard */,
 				671954881DCC96040082D9AD /* Assets.xcassets */,
@@ -75,6 +73,8 @@
 				671954991DCD26240082D9AD /* VRegister.swift */,
 				671954971DCCF37B0082D9AD /* CHome.swift */,
 				6719549B1DCD26380082D9AD /* CRegister.swift */,
+				C282702B1DDB44BC00DE0D4E /* VUser.swift */,
+				C282702D1DDB44D800DE0D4E /* CUser.swift */,
 			);
 			path = ApplicationBlueshelfIOS;
 			sourceTree = "<group>";
@@ -111,7 +111,6 @@
 				TargetAttributes = {
 					6719547D1DCC96030082D9AD = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 88R48YMS7W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,8 +141,6 @@
 				6719548C1DCC96040082D9AD /* LaunchScreen.storyboard in Resources */,
 				671954891DCC96040082D9AD /* Assets.xcassets in Resources */,
 				671954871DCC96040082D9AD /* Main.storyboard in Resources */,
-				671954961DCCEB9C0082D9AD /* Controller in Resources */,
-				671954951DCCEB9C0082D9AD /* View in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,9 +153,11 @@
 			files = (
 				671954841DCC96040082D9AD /* VHome.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
+				C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */,
 				6719549C1DCD26380082D9AD /* CRegister.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CHome.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
+				C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 88R48YMS7W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ApplicationBlueshelfIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS;
@@ -294,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 88R48YMS7W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ApplicationBlueshelfIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS;

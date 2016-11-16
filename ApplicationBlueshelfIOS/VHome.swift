@@ -39,7 +39,10 @@ class VHome: UIViewController {
         let resul = ControllerHome.RequestPostConnection(Username: UserName! , PassWord: Password!)
         if resul == 201
         {
-        self.testlbl.text = "OK"
+            self.testlbl.text = "OK"
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let uv = storyboard.instantiateViewController(withIdentifier: "VUser") as! VUser;
+            navigationController?.show(uv, sender: self)
         }
         if resul == 400
         {
