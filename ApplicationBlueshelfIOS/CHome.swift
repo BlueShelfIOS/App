@@ -15,7 +15,7 @@ class CHome {
     func RequestPostConnection(Username: String, PassWord: String) -> Int {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
         request.httpMethod = "POST"
-        let postString = "login=" + Username + "&password=" + PassWord
+        let postString = "login=" + Username + "&password=" + PassWord + "&type=0"
         request.httpBody = postString.data(using: .utf8)
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0);
@@ -64,7 +64,7 @@ class CHome {
                 let lastname:String?
                 let email:String?
                 firstname = nestedDictionary["firstName"]  as? String
-                lastname = nestedDictionary["lasttName"] as? String
+                lastname = nestedDictionary["lastName"] as? String
                 email = nestedDictionary["email"] as? String
                 print(firstname!)
                 print(lastname!)
