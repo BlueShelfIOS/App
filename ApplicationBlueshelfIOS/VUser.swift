@@ -10,6 +10,9 @@ import UIKit
 
 class VUser: UIViewController {
 
+    @IBOutlet weak var Lbl_UserName: UILabel!
+    @IBOutlet weak var Lbl_UserEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
