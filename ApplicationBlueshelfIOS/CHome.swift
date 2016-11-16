@@ -59,19 +59,19 @@ class CHome {
                 // access individual value in dictionary
                 
             }
-            for (key, value) in dictionary {
-                print ("Key =")
-                print (key)
-                print ("Value =")
-                print(value)
-                /*if (key == "firstName"){
-                print("firstname =\(value)")
+            if let nestedDictionary = dictionary["user"] as? [String: Any] {
+                let firstname:String?
+                let lastname:String?
+                let email:String?
+                firstname = nestedDictionary["firstName"]  as? String
+                lastname = nestedDictionary["lasttName"] as? String
+                email = nestedDictionary["email"] as? String
+                print(firstname!)
+                print(lastname!)
+                print(email!)
+                    }
+                    
+                    
                 }
-                if (key == "lasttName"){
-                    print("lasttName =\(value)")
-                }*/
-               
             }
         }
-    }
-}
