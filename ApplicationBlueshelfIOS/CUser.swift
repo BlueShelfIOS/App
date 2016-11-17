@@ -57,7 +57,7 @@ class CUser {
             }
         }
     }
-    /*func Deconnection() {
+    func Deconnection() {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
         request.httpMethod = "DELETE"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
@@ -70,7 +70,7 @@ class CUser {
                 semaphore.signal()
                 return // Error Connection
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 204 {
                 self.Deserializer(data: data)
                 print ("Deconnecté")
                 semaphore.signal()
@@ -81,5 +81,5 @@ class CUser {
         }
         task.resume()
         semaphore.wait()
-    }*/
+    }
 }

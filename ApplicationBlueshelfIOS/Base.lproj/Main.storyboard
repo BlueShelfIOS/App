@@ -147,12 +147,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZo-vf-La5">
+                                <rect key="frame" x="255" y="43" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Se deconnecter"/>
+                                <connections>
+                                    <action selector="BtnDeconnexion:" destination="NVQ-2F-lU2" eventType="touchUpInside" id="4jT-1v-7Ei"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.37358206510543823" blue="0.39245149493217468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="Lbl_UserEmail" destination="Pbr-G3-O5A" id="GlQ-b4-acU"/>
                         <outlet property="Lbl_UserName" destination="52F-Cd-Wen" id="koR-yC-ZKg"/>
+                        <outlet property="SeDeconnecter" destination="zZo-vf-La5" id="vFP-OA-WGA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6i-4e-Djf" userLabel="First Responder" sceneMemberID="firstResponder"/>
