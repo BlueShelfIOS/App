@@ -10,11 +10,10 @@ import Foundation
 
 class CUser {
     
-    func RequestPostConnection(Token: String) -> Int {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user")!)
+    func RequestUser(Token: String) -> Int {
+        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user?_format=json")!)
         request.httpMethod = "GET"
-        let postString = "X-Auth-Token=" + Token
-        request.value(forHTTPHeaderField: postString)
+        request.setValue(Token, forHTTPHeaderField: "X-Auth-Token")
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)
@@ -26,13 +25,9 @@ class CUser {
                 semaphore.signal()
                 return // Error Connection
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
-                ReturnCode = 201
-                //let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
-                //String(data: data, encoding: .utf8) // token
-                //let data: Data
-                //print("responseString = \(responseString)")
-                //self.Deserializer(data: data)
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
+                ReturnCode = 200
+                self.Deserializer(data: data)
                 semaphore.signal()
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
@@ -42,6 +37,24 @@ class CUser {
         }
         task.resume()
         semaphore.wait()
+        print(ReturnCode)
         return ReturnCode
+    }
+    
+    func Deserializer(data: Data) {
+        let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
+        print("responseString = \(responseString)")
+        if let dictionary = responseString as? [String: Any]
+        {
+            if let fname = dictionary["firstName"] as? String {
+                ModelData.setFirstName(Firstname: fname)
+            }
+            if let lname = dictionary["lastName"] as? String {
+                ModelData.setLastName(Lastname: lname)
+            }
+            if let email = dictionary["email"] as? String {
+                ModelData.setEmail(Email: email)
+            }
+        }
     }
 }

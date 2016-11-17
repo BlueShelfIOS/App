@@ -17,32 +17,18 @@ class VUser: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let res = ControlerUser.RequestPostConnection(Token: ModelData.getToken())
+        let res = ControlerUser.RequestUser(Token: ModelData.getToken())
         
-        if res == 201
+        if res == 200
         {
+            self.Lbl_UserEmail.text = ModelData.getEmail()
+            self.Lbl_UserName.text = "M." + ModelData.getFirstName() + " " + ModelData.getLastName()
             print("OK")
         }
-        else
-        {
-            self.Lbl_UserName.text = ModelData.getFirstName() + " " + ModelData.getLastName()
-            self.Lbl_UserEmail.text = ModelData.getEmail()
-        }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
