@@ -10,6 +10,7 @@ import UIKit
 
 class VUser: UIViewController {
 
+    @IBOutlet weak var SeDeconnecter: UIButton!
     //@IBOutlet weak var BtnDeconection: UIButton!
     @IBOutlet weak var Lbl_UserName: UILabel!
     @IBOutlet weak var Lbl_UserEmail: UILabel!
@@ -28,15 +29,18 @@ class VUser: UIViewController {
         }
     }
 
+    @IBAction func BtnDeconnexion(_ sender: Any) {
+        ControlerUser.Deconnection()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*@IBAction func BtnDeconnexion_OnClick(_ sender: Any) {
+    @IBAction func BtnDeconnexion_OnClick(_ sender: Any) {
         ControlerUser.Deconnection()
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VHome")
         self.present(vc, animated: true, completion: nil)
 
-    }*/
+    }
 }
