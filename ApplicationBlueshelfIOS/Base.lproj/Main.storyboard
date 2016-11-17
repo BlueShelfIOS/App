@@ -147,19 +147,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5b-pH-NyB">
-                                <rect key="frame" x="268" y="20" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Se deconnecter"/>
-                                <connections>
-                                    <action selector="BtnDeconnexion_OnClick:" destination="NVQ-2F-lU2" eventType="touchUpInside" id="Und-Pt-VFF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.37358206510543823" blue="0.39245149493217468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="BtnDecconection" destination="R5b-pH-NyB" id="meI-TE-Cm7"/>
                         <outlet property="Lbl_UserEmail" destination="Pbr-G3-O5A" id="GlQ-b4-acU"/>
                         <outlet property="Lbl_UserName" destination="52F-Cd-Wen" id="koR-yC-ZKg"/>
                     </connections>
