@@ -57,4 +57,29 @@ class CUser {
             }
         }
     }
+    /*func Deconnection() {
+        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
+        request.httpMethod = "DELETE"
+        request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
+        let semaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: request)
+        {
+            data, response, error in
+            guard let data = data, error == nil else
+            {
+                semaphore.signal()
+                return // Error Connection
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
+                self.Deserializer(data: data)
+                print ("Deconnecté")
+                semaphore.signal()
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
+                semaphore.signal()
+            }
+        }
+        task.resume()
+        semaphore.wait()
+    }*/
 }

@@ -12,8 +12,6 @@ let ModelData = Model()
 
 class CHome {
 
-
-    
     func RequestPostConnection(Username: String, PassWord: String) -> Int {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/auth-tokens")!)
         request.httpMethod = "POST"
