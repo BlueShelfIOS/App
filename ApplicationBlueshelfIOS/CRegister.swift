@@ -34,7 +34,7 @@ class CRegister {
         }
         return (true)
     }
-    
+ 
     func RequestPostRegister(FirstName: String, LastName: String, Password: String, Email: String) -> Int {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/users")!)
         request.httpMethod = "POST"
@@ -62,6 +62,9 @@ class CRegister {
                 semaphore.signal()
             }
         }
+        
+        print(ReturnCode)
+        semaphore.signal()
         task.resume()
         semaphore.wait()
         return ReturnCode
