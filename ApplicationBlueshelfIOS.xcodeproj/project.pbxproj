@@ -18,6 +18,7 @@
 		6720EAB01DDC7046003CD432 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720EAAF1DDC7046003CD432 /* Model.swift */; };
 		67A385391DDCADD6001A7FDE /* VForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */; };
 		67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */; };
+		C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205DCCF1DE304C800308147 /* CScannerReading.swift */; };
 		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
 		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		6720EAAF1DDC7046003CD432 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VForgottenPassword.swift; sourceTree = "<group>"; };
 		67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CForgottenPassword.swift; sourceTree = "<group>"; };
+		C205DCCF1DE304C800308147 /* CScannerReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScannerReading.swift; sourceTree = "<group>"; };
 		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
 		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				6720EAAF1DDC7046003CD432 /* Model.swift */,
 				67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */,
 				67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */,
+				C205DCCF1DE304C800308147 /* CScannerReading.swift */,
 			);
 			path = ApplicationBlueshelfIOS;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 					6719547D1DCC96030082D9AD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5JVQ2K2EF9;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,6 +175,7 @@
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
 				C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */,
 				6720EAB01DDC7046003CD432 /* Model.swift in Sources */,
+				C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5JVQ2K2EF9;
@@ -300,6 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -308,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5JVQ2K2EF9;

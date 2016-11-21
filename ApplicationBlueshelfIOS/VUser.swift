@@ -12,8 +12,9 @@ class VUser: UIViewController {
 
     @IBOutlet weak var SeDeconnecter: UIButton!
     //@IBOutlet weak var BtnDeconection: UIButton!
-    @IBOutlet weak var Lbl_UserName: UILabel!
-    @IBOutlet weak var Lbl_UserEmail: UILabel!
+    @IBOutlet weak var TF_UserLastName: UITextField!
+    @IBOutlet weak var TF_UserEmail: UITextField!
+    @IBOutlet weak var TF_UserName: UITextField!
     var ControlerUser = CUser()
     
     override func viewDidLoad() {
@@ -23,12 +24,22 @@ class VUser: UIViewController {
         
         if res == 200
         {
-            self.Lbl_UserEmail.text = ModelData.getEmail()
-            self.Lbl_UserName.text = "M." + ModelData.getFirstName() + " " + ModelData.getLastName()
-            print("OK")
+            self.TF_UserEmail.text = ModelData.getEmail()
+            self.TF_UserName.text = ModelData.getFirstName()
+            self.TF_UserLastName.text = ModelData.getLastName()
         }
     }
 
+    @IBAction func TF_UserNameModified(_ sender: Any) {
+        let res = ControlerUser.ModifyUserNameInformation(Name: self.TF_UserName.text!)
+        if (res == 200) {
+            print("OK CA A MARCHE")
+        }
+        else {
+            print("RATE")
+        }
+    }
+    
     @IBAction func BtnDeconnexion(_ sender: Any) {
         ControlerUser.Deconnection()
     }
