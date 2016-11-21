@@ -41,6 +41,5 @@ class VUser: UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VHome")
         self.present(vc, animated: true, completion: nil)
-
     }
 }
