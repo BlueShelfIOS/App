@@ -157,6 +157,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TF_UserLastNameModified:" destination="NVQ-2F-lU2" eventType="editingDidEnd" id="cbr-Ud-XCy"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krE-gf-RDx">
                                 <rect key="frame" x="41" y="215" width="144" height="30"/>
@@ -164,6 +167,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TF_UserEmailModified:" destination="NVQ-2F-lU2" eventType="editingDidEnd" id="qNT-pd-D91"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.37358206510543823" blue="0.39245149493217468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

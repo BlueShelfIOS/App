@@ -40,14 +40,12 @@ class CUser {
         print(ReturnCode)
         return ReturnCode
     }
-    
+
     func ModifyUserNameInformation(Name: String) -> Int {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user")!)
+        let urlStr = "https://dev.blueshelf.fr/app_dev.php/api/user?firstName=" + Name
+        var request = URLRequest(url: URL(string: urlStr)!)
         request.httpMethod = "PATCH"
-        let postString = "firstName=" + Name
-        print("REQUETE : " + postString)
-        request.httpBody = postString.data(using: .utf8)
-        request.addValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
+        request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)
@@ -63,8 +61,8 @@ class CUser {
                 ReturnCode = 200
                 semaphore.signal()
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
-                ReturnCode = 401
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 400 {
+                ReturnCode = 400
                 semaphore.signal()
             }
         }
@@ -75,11 +73,10 @@ class CUser {
     }
     
     func ModifyUserLastNameInformation(LastName: String) -> Int {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user")!)
+        let urlStr = "https://dev.blueshelf.fr/app_dev.php/api/user?lastName=" + LastName
+        var request = URLRequest(url: URL(string: urlStr)!)
         request.httpMethod = "PATCH"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
-        let postString = "lastName=" + LastName
-        request.httpBody = postString.data(using: .utf8)
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)
@@ -96,7 +93,7 @@ class CUser {
                 semaphore.signal()
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
-                ReturnCode = 401
+                ReturnCode = 400
                 semaphore.signal()
             }
         }
@@ -107,11 +104,10 @@ class CUser {
     }
     
     func ModifyUserEmailInformation(Email: String) -> Int {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/user")!)
+        let urlStr = "https://dev.blueshelf.fr/app_dev.php/api/user?email=" + Email
+        var request = URLRequest(url: URL(string: urlStr)!)
         request.httpMethod = "PATCH"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
-        let postString = "email=" + Email
-        request.httpBody = postString.data(using: .utf8)
         var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)

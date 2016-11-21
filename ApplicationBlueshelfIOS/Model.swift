@@ -14,6 +14,7 @@ class Model {
     var _LastName:String?
     var _Email:String?
     var _Token:String?
+    var _Password:String?
     
     
     func getFirstName() -> String {
@@ -29,6 +30,9 @@ class Model {
     }
     func getToken() -> String {
         return(self._Token)!
+    }
+    func getPassword() -> String  {
+        return(self._Password)!
     }
 
     
@@ -47,6 +51,8 @@ class Model {
     func setToken(Token:String) {
         _Token = Token
     }
-
+    func setPassword(Password:String) {
+        _Password = Password
+    }
 
 }

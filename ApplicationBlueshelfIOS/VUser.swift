@@ -33,16 +33,28 @@ class VUser: UIViewController {
     @IBAction func TF_UserNameModified(_ sender: Any) {
         let res = ControlerUser.ModifyUserNameInformation(Name: self.TF_UserName.text!)
         if (res == 200) {
-            print("OK CA A MARCHE")
+
         }
-        else {
-            print("RATE")
+    }
+    
+    @IBAction func TF_UserLastNameModified(_ sender: Any) {
+        let res = ControlerUser.ModifyUserLastNameInformation(LastName: self.TF_UserLastName.text!)
+        if (res == 200) {
+            
+        }
+    }
+    
+    @IBAction func TF_UserEmailModified(_ sender: Any) {
+        let res = ControlerUser.ModifyUserEmailInformation(Email: self.TF_UserEmail.text!)
+        if (res == 200) {
+            
         }
     }
     
     @IBAction func BtnDeconnexion(_ sender: Any) {
         ControlerUser.Deconnection()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
