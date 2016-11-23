@@ -27,7 +27,7 @@ class CHome {
                 ReturnCode = -1
                 semaphore.signal()
                 return // Error Connection
-                //totot
+                
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
                 ReturnCode = 201
