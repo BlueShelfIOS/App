@@ -10,7 +10,6 @@ import UIKit
 
 class VForgottenPassword: UIViewController {
 
-    @IBOutlet weak var LblError: UILabel!
     @IBOutlet weak var TxtbEmail: UITextField!
     @IBOutlet weak var BtnValidate: UIButton!
     var ControllerForgotenPassword = CForgottenPassword()
@@ -28,18 +27,31 @@ class VForgottenPassword: UIViewController {
     
     @IBAction func BtnValidate_OnClick(_ sender: Any) {
         if (ControllerForgotenPassword.VerifyEmail(Email: self.TxtbEmail.text!) == false){
-            self.LblError.text = "Veuillez verifier l'adresse email."
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Adresse mail incorect, Veuillez réesayer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+
             return
         }
         let resul = ControllerForgotenPassword.RequestPostResetPassword(Email: self.TxtbEmail.text!)
         if resul == 201
         {
-            self.LblError.text = "OK"
+            let alert = UIAlertView()
+            alert.title = "Confirmation"
+            alert.message = "Un mail a bien été envoyé à cette adresse."
+            alert.addButton(withTitle: "OK")
+            alert.show()
         }
         if resul == 400
         {
-            self.LblError.text = "Error name or password"
-        }
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Adresse mail incorect, Veuillez réesayer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+                  }
     }
 
     /*

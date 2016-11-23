@@ -47,21 +47,40 @@ class VRegister: UIViewController {
         let password1 = self.TxtfPassword1.text
         let password2 = self.TxtfPassword2.text
         if (ControllerRegister.VerifyInputFields(FirstName: name!, LastName: surname!, Email: email!, Password1: password1!, Password2: password2!) == false ){
-            self.LblError.text = "Veuillez remplir tous les champs."
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Veuillez remplir tous les champs."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+
             return
         }
         if (ControllerRegister.VerifyEmail(Email: self.TxtfEmail.text!) == false){
-            self.LblError.text = "Veuillez verifier l'adresse email."
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Adresse mail incorect, Veuillez réesayer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+
             return
         }
         if (ControllerRegister.VerifySamePassword(Password1: self.TxtfPassword1.text!, Password2: self.TxtfPassword2.text!) == false){
-            self.LblError.text = "Les deux mots de passes ne sont pas identiques."
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Les deux mots sont de passe ne sont pas identiques, Veuillez réesayer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+
             return
         }
         let resul = ControllerRegister.RequestPostRegister(FirstName: name!, LastName: surname!, Password: password1!, Email: email!)
         if resul == 201
         {
-            self.LblError.text = "Created"
+            let alert = UIAlertView()
+            alert.title = "Confirmation"
+            alert.message = "Votre compte a bien été créer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
         }
         if resul == 400
         {
@@ -69,7 +88,12 @@ class VRegister: UIViewController {
         }
         if resul == -1
         {
-            self.LblError.text  = "Server Error"
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Une erreur est survenue, Veuillez réesayer ultérieurement."
+            alert.addButton(withTitle: "OK")
+            alert.show()
+
         }
 
     }

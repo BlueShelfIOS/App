@@ -10,7 +10,8 @@ import UIKit
 
 class VHome: UIViewController {
 
-    @IBOutlet weak var testlbl: UILabel!
+
+   
     @IBOutlet weak var TxtfUser: UITextField!
     @IBOutlet weak var TxtfPassword: UITextField!
     @IBOutlet weak var BtnValidate: UIButton!
@@ -33,26 +34,46 @@ class VHome: UIViewController {
         self.TxtfPassword.isSecureTextEntry = true
     }
 
+    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
+        
+        // create the alert
+        let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+
     @IBAction func BtnValidate_OnClick(_ sender: Any) {
         let UserName = self.TxtfUser.text
         let  Password =  self.TxtfPassword.text
         let resul = ControllerHome.RequestPostConnection(Username: UserName! , PassWord: Password!)
         if resul == 201
         {
-            self.testlbl.text = "OK"
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VUser")
             self.present(vc, animated: true, completion: nil)
         }
         if resul == 400
         {
-            self.testlbl.text = "Error name or password"
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Adresse mail ou mot de passe incorect, Veuillez réesayer."
+            alert.addButton(withTitle: "OK")
+            alert.show()
         }
         if resul == -1
         {
-            self.testlbl.text = "Server Error"
+            let alert = UIAlertView()
+            alert.title = "Erreur"
+            alert.message = "Une erreur est survenue, Veuillez réesayer ultérieurement."
+            alert.addButton(withTitle: "OK")
+            alert.show()
         }
 
     }
+    
 }
 
