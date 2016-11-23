@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khe-GG-Py2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013" y="768"/>
+            <point key="canvasLocation" x="1013" y="765"/>
         </scene>
         <!--Forgotten Password-->
         <scene sceneID="UKL-Oc-411">
