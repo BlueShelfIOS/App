@@ -120,7 +120,7 @@
 				TargetAttributes = {
 					6719547D1DCC96030082D9AD = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5JVQ2K2EF9;
+						DevelopmentTeam = 88R48YMS7W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -295,7 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5JVQ2K2EF9;
+				DEVELOPMENT_TEAM = 88R48YMS7W;
 				INFOPLIST_FILE = ApplicationBlueshelfIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS;
@@ -310,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5JVQ2K2EF9;
+				DEVELOPMENT_TEAM = 88R48YMS7W;
 				INFOPLIST_FILE = ApplicationBlueshelfIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS;
