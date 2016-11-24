@@ -10,6 +10,7 @@ import UIKit
 
 class VUser: UIViewController {
 
+    @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
     @IBOutlet weak var SeDeconnecter: UIButton!
     //@IBOutlet weak var BtnDeconection: UIButton!
     @IBOutlet weak var TF_UserLastName: UITextField!
@@ -28,6 +29,11 @@ class VUser: UIViewController {
             self.TF_UserName.text = ModelData.getFirstName()
             self.TF_UserLastName.text = ModelData.getLastName()
         }
+        
+        Btn_OpenMenu.target = self.revealViewController()
+        Btn_OpenMenu.action = Selector("revealToggle:")
+        
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 
     @IBAction func TF_UserNameModified(_ sender: Any) {

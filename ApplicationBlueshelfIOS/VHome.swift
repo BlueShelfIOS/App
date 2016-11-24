@@ -53,7 +53,7 @@ class VHome: UIViewController {
         if resul == 201
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VUser")
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewDisplayer")
             self.present(vc, animated: true, completion: nil)
         }
         if resul == 400

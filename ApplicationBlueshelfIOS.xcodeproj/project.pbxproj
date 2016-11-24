@@ -19,8 +19,26 @@
 		67A385391DDCADD6001A7FDE /* VForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */; };
 		67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */; };
 		C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205DCCF1DE304C800308147 /* CScannerReading.swift */; };
+		C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */; };
+		C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */; };
 		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
 		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
+		C2C503AB1DE732B700604D71 /* VAccueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AA1DE732B700604D71 /* VAccueil.swift */; };
+		C2C503AD1DE73C6800604D71 /* VFindShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AC1DE73C6800604D71 /* VFindShop.swift */; };
+		C2C503AF1DE73CBD00604D71 /* VProductTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AE1DE73CBD00604D71 /* VProductTree.swift */; };
+		C2C503B51DE73D7A00604D71 /* VNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503B41DE73D7A00604D71 /* VNews.swift */; };
+		C2C503B71DE73D9D00604D71 /* VReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503B61DE73D9D00604D71 /* VReview.swift */; };
+		C2C503B91DE73DB100604D71 /* VContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503B81DE73DB100604D71 /* VContact.swift */; };
+		C2C503BB1DE73DC000604D71 /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503BA1DE73DC000604D71 /* VSettings.swift */; };
+		C2C503BD1DE73DCE00604D71 /* VTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503BC1DE73DCE00604D71 /* VTutorial.swift */; };
+		C2C503BF1DE740D900604D71 /* CAccueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503BE1DE740D900604D71 /* CAccueil.swift */; };
+		C2C503C11DE740ED00604D71 /* CFindShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503C01DE740ED00604D71 /* CFindShop.swift */; };
+		C2C503C31DE740FA00604D71 /* CProductTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503C21DE740FA00604D71 /* CProductTree.swift */; };
+		C2C503C51DE7410A00604D71 /* CNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503C41DE7410A00604D71 /* CNews.swift */; };
+		C2C503C71DE7412000604D71 /* CReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503C61DE7412000604D71 /* CReview.swift */; };
+		C2C503C91DE7412B00604D71 /* CContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503C81DE7412B00604D71 /* CContact.swift */; };
+		C2C503CB1DE7413400604D71 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503CA1DE7413400604D71 /* CSettings.swift */; };
+		C2C503CD1DE7413D00604D71 /* CTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503CC1DE7413D00604D71 /* CTutorial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +56,28 @@
 		67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VForgottenPassword.swift; sourceTree = "<group>"; };
 		67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CForgottenPassword.swift; sourceTree = "<group>"; };
 		C205DCCF1DE304C800308147 /* CScannerReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScannerReading.swift; sourceTree = "<group>"; };
+		C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VScannerReading.swift; sourceTree = "<group>"; };
+		C24B026A1DE7055C005AACE0 /* ApplicationBlueshelfIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationBlueshelfIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		C24B026B1DE7055D005AACE0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
 		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
+		C2C503AA1DE732B700604D71 /* VAccueil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAccueil.swift; sourceTree = "<group>"; };
+		C2C503AC1DE73C6800604D71 /* VFindShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFindShop.swift; sourceTree = "<group>"; };
+		C2C503AE1DE73CBD00604D71 /* VProductTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProductTree.swift; sourceTree = "<group>"; };
+		C2C503B41DE73D7A00604D71 /* VNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VNews.swift; sourceTree = "<group>"; };
+		C2C503B61DE73D9D00604D71 /* VReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VReview.swift; sourceTree = "<group>"; };
+		C2C503B81DE73DB100604D71 /* VContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VContact.swift; sourceTree = "<group>"; };
+		C2C503BA1DE73DC000604D71 /* VSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
+		C2C503BC1DE73DCE00604D71 /* VTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTutorial.swift; sourceTree = "<group>"; };
+		C2C503BE1DE740D900604D71 /* CAccueil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAccueil.swift; sourceTree = "<group>"; };
+		C2C503C01DE740ED00604D71 /* CFindShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFindShop.swift; sourceTree = "<group>"; };
+		C2C503C21DE740FA00604D71 /* CProductTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CProductTree.swift; sourceTree = "<group>"; };
+		C2C503C41DE7410A00604D71 /* CNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNews.swift; sourceTree = "<group>"; };
+		C2C503C61DE7412000604D71 /* CReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CReview.swift; sourceTree = "<group>"; };
+		C2C503C81DE7412B00604D71 /* CContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CContact.swift; sourceTree = "<group>"; };
+		C2C503CA1DE7413400604D71 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
+		C2C503CC1DE7413D00604D71 /* CTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTutorial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,23 +110,67 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
+				C2C503D01DE741D900604D71 /* Support */,
+				C2C503CF1DE741A300604D71 /* Controler */,
+				C2C503CE1DE7419700604D71 /* View */,
 				671954811DCC96040082D9AD /* AppDelegate.swift */,
 				671954851DCC96040082D9AD /* Main.storyboard */,
 				671954881DCC96040082D9AD /* Assets.xcassets */,
 				6719548A1DCC96040082D9AD /* LaunchScreen.storyboard */,
 				6719548D1DCC96040082D9AD /* Info.plist */,
+			);
+			path = ApplicationBlueshelfIOS;
+			sourceTree = "<group>";
+		};
+		C2C503CE1DE7419700604D71 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				671954831DCC96040082D9AD /* VHome.swift */,
 				671954991DCD26240082D9AD /* VRegister.swift */,
+				C282702B1DDB44BC00DE0D4E /* VUser.swift */,
+				67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */,
+				C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */,
+				C2C503AA1DE732B700604D71 /* VAccueil.swift */,
+				C2C503AC1DE73C6800604D71 /* VFindShop.swift */,
+				C2C503AE1DE73CBD00604D71 /* VProductTree.swift */,
+				C2C503B41DE73D7A00604D71 /* VNews.swift */,
+				C2C503B61DE73D9D00604D71 /* VReview.swift */,
+				C2C503B81DE73DB100604D71 /* VContact.swift */,
+				C2C503BA1DE73DC000604D71 /* VSettings.swift */,
+				C2C503BC1DE73DCE00604D71 /* VTutorial.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C2C503CF1DE741A300604D71 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				C2C503BE1DE740D900604D71 /* CAccueil.swift */,
+				C2C503C01DE740ED00604D71 /* CFindShop.swift */,
+				C2C503C21DE740FA00604D71 /* CProductTree.swift */,
+				C2C503C41DE7410A00604D71 /* CNews.swift */,
+				C2C503C61DE7412000604D71 /* CReview.swift */,
+				C2C503C81DE7412B00604D71 /* CContact.swift */,
+				C2C503CA1DE7413400604D71 /* CSettings.swift */,
+				C2C503CC1DE7413D00604D71 /* CTutorial.swift */,
 				671954971DCCF37B0082D9AD /* CHome.swift */,
 				6719549B1DCD26380082D9AD /* CRegister.swift */,
-				C282702B1DDB44BC00DE0D4E /* VUser.swift */,
 				C282702D1DDB44D800DE0D4E /* CUser.swift */,
 				6720EAAF1DDC7046003CD432 /* Model.swift */,
-				67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */,
 				67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */,
 				C205DCCF1DE304C800308147 /* CScannerReading.swift */,
 			);
-			path = ApplicationBlueshelfIOS;
+			name = Controler;
+			sourceTree = "<group>";
+		};
+		C2C503D01DE741D900604D71 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C24B026B1DE7055D005AACE0 /* SWRevealViewController.h */,
+				C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */,
+				C24B026A1DE7055C005AACE0 /* ApplicationBlueshelfIOS-Bridging-Header.h */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,17 +247,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */,
+				C2C503C31DE740FA00604D71 /* CProductTree.swift in Sources */,
 				671954841DCC96040082D9AD /* VHome.swift in Sources */,
+				C2C503CD1DE7413D00604D71 /* CTutorial.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
+				C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */,
+				C2C503AF1DE73CBD00604D71 /* VProductTree.swift in Sources */,
 				C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */,
 				6719549C1DCD26380082D9AD /* CRegister.swift in Sources */,
 				67A385391DDCADD6001A7FDE /* VForgottenPassword.swift in Sources */,
+				C2C503AD1DE73C6800604D71 /* VFindShop.swift in Sources */,
+				C2C503BB1DE73DC000604D71 /* VSettings.swift in Sources */,
+				C2C503C71DE7412000604D71 /* CReview.swift in Sources */,
+				C2C503BF1DE740D900604D71 /* CAccueil.swift in Sources */,
+				C2C503AB1DE732B700604D71 /* VAccueil.swift in Sources */,
+				C2C503CB1DE7413400604D71 /* CSettings.swift in Sources */,
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CHome.swift in Sources */,
+				C2C503B91DE73DB100604D71 /* VContact.swift in Sources */,
+				C2C503C11DE740ED00604D71 /* CFindShop.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
 				C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */,
+				C2C503C91DE7412B00604D71 /* CContact.swift in Sources */,
 				6720EAB01DDC7046003CD432 /* Model.swift in Sources */,
+				C2C503C51DE7410A00604D71 /* CNews.swift in Sources */,
 				C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */,
+				C2C503B71DE73D9D00604D71 /* VReview.swift in Sources */,
+				C2C503B51DE73D7A00604D71 /* VNews.swift in Sources */,
+				C2C503BD1DE73DCE00604D71 /* VTutorial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ApplicationBlueshelfIOS/ApplicationBlueshelfIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -325,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BFapp.ApplicationBlueshelfIOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ApplicationBlueshelfIOS/ApplicationBlueshelfIOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
