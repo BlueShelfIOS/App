@@ -27,14 +27,9 @@ class CHome {
                 ReturnCode = -1
                 semaphore.signal()
                 return // Error Connection
-                //totot
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
                 ReturnCode = 201
-                //let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
-                //String(data: data, encoding: .utf8) // token
-                //let data: Data
-                //print("responseString = \(responseString)")
                 self.Deserializer(data: data)
                 semaphore.signal()
             }
@@ -51,15 +46,11 @@ class CHome {
     func Deserializer(data: Data)
     {
         let responseString = try? JSONSerialization.jsonObject(with: data, options: [])
-        //String(data: data, encoding: .utf8) // token
-        print("responseString = \(responseString)")
         if let dictionary = responseString as? [String: Any]
         {
             if let token = dictionary["value"] as? String {
                 print("Token = \(token)")
                 ModelData.setToken(Token: token)
-                // access individual value in dictionary
-                
             }
             if let nestedDictionary = dictionary["user"] as? [String: Any] {
                 let firstname:String?
@@ -71,12 +62,9 @@ class CHome {
                 ModelData.setFirstName(Firstname: firstname!)
                 ModelData.setLastName(Lastname: lastname!)
                 ModelData.setEmail(Email: email!)
-                print(firstname!)
-                print(lastname!)
-                print(email!)
-                    }
-                    
-                    
-                }
             }
+            
+            
         }
+    }
+}

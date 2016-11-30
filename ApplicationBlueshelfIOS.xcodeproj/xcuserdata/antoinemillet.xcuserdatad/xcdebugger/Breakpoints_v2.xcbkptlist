@@ -6,22 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ApplicationBlueshelfIOS/VHome.swift"
-            timestampString = "501179259.595359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "BtnValidate_OnClick(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -41,22 +25,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ApplicationBlueshelfIOS/CHome.swift"
-            timestampString = "501092922.365082"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "Deserializer(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ApplicationBlueshelfIOS/Model.swift"
             timestampString = "500986254.551912"
             startingColumnNumber = "9223372036854775807"
@@ -67,14 +35,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ApplicationBlueshelfIOS.Model.__deallocating_deinit"
                   moduleName = "ApplicationBlueshelfIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoinemillet/Documents/ApplicationBlueshelfIOS/ApplicationBlueshelfIOS/Model.swift"
-                  timestampString = "501180557.220591"
+                  timestampString = "502117260.954356"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -82,29 +50,29 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ApplicationBlueshelfIOS.Model.init () -&gt; ApplicationBlueshelfIOS.Model"
                   moduleName = "ApplicationBlueshelfIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoinemillet/Documents/ApplicationBlueshelfIOS/ApplicationBlueshelfIOS/Model.swift"
-                  timestampString = "501180557.224199"
+                  timestampString = "502117260.957859"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ApplicationBlueshelfIOS.Model.__allocating_init () -&gt; ApplicationBlueshelfIOS.Model"
                   moduleName = "ApplicationBlueshelfIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoinemillet/Documents/ApplicationBlueshelfIOS/ApplicationBlueshelfIOS/Model.swift"
-                  timestampString = "501180557.225926"
+                  timestampString = "502117260.959387"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -112,6 +80,22 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApplicationBlueshelfIOS/ProductTableViewController.swift"
+            timestampString = "502211901.651388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "Deserializer(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

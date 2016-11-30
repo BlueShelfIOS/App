@@ -9,15 +9,18 @@
 /* Begin PBXBuildFile section */
 		671954821DCC96040082D9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954811DCC96040082D9AD /* AppDelegate.swift */; };
 		671954841DCC96040082D9AD /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954831DCC96040082D9AD /* VHome.swift */; };
-		671954871DCC96040082D9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671954851DCC96040082D9AD /* Main.storyboard */; };
 		671954891DCC96040082D9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671954881DCC96040082D9AD /* Assets.xcassets */; };
 		6719548C1DCC96040082D9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6719548A1DCC96040082D9AD /* LaunchScreen.storyboard */; };
 		671954981DCCF37B0082D9AD /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954971DCCF37B0082D9AD /* CHome.swift */; };
 		6719549A1DCD26240082D9AD /* VRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671954991DCD26240082D9AD /* VRegister.swift */; };
 		6719549C1DCD26380082D9AD /* CRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719549B1DCD26380082D9AD /* CRegister.swift */; };
 		6720EAB01DDC7046003CD432 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720EAAF1DDC7046003CD432 /* Model.swift */; };
+		673C11511DEF0E7D00DFDD1D /* VProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673C11501DEF0E7D00DFDD1D /* VProduct.swift */; };
+		673C11531DEF0F1F00DFDD1D /* CProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673C11521DEF0F1F00DFDD1D /* CProduct.swift */; };
 		67A385391DDCADD6001A7FDE /* VForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */; };
 		67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */; };
+		67D30E9D1DEF101300E710A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D30E9B1DEF101300E710A4 /* Main.storyboard */; };
+		67F9B3841DEDB2B200604FE7 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F9B3831DEDB2B200604FE7 /* ProductTableViewController.swift */; };
 		C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205DCCF1DE304C800308147 /* CScannerReading.swift */; };
 		C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */; };
 		C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */; };
@@ -45,7 +48,6 @@
 		6719547E1DCC96040082D9AD /* ApplicationBlueshelfIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationBlueshelfIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671954811DCC96040082D9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		671954831DCC96040082D9AD /* VHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
-		671954861DCC96040082D9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		671954881DCC96040082D9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6719548B1DCC96040082D9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6719548D1DCC96040082D9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,8 +55,12 @@
 		671954991DCD26240082D9AD /* VRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRegister.swift; sourceTree = "<group>"; };
 		6719549B1DCD26380082D9AD /* CRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRegister.swift; sourceTree = "<group>"; };
 		6720EAAF1DDC7046003CD432 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		673C11501DEF0E7D00DFDD1D /* VProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProduct.swift; sourceTree = "<group>"; };
+		673C11521DEF0F1F00DFDD1D /* CProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CProduct.swift; sourceTree = "<group>"; };
 		67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VForgottenPassword.swift; sourceTree = "<group>"; };
 		67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CForgottenPassword.swift; sourceTree = "<group>"; };
+		67D30E9C1DEF101300E710A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67F9B3831DEDB2B200604FE7 /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		C205DCCF1DE304C800308147 /* CScannerReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScannerReading.swift; sourceTree = "<group>"; };
 		C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VScannerReading.swift; sourceTree = "<group>"; };
 		C24B026A1DE7055C005AACE0 /* ApplicationBlueshelfIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationBlueshelfIOS-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -110,11 +116,11 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
+				67D30E9B1DEF101300E710A4 /* Main.storyboard */,
 				C2C503D01DE741D900604D71 /* Support */,
 				C2C503CF1DE741A300604D71 /* Controler */,
 				C2C503CE1DE7419700604D71 /* View */,
 				671954811DCC96040082D9AD /* AppDelegate.swift */,
-				671954851DCC96040082D9AD /* Main.storyboard */,
 				671954881DCC96040082D9AD /* Assets.xcassets */,
 				6719548A1DCC96040082D9AD /* LaunchScreen.storyboard */,
 				6719548D1DCC96040082D9AD /* Info.plist */,
@@ -138,6 +144,8 @@
 				C2C503B81DE73DB100604D71 /* VContact.swift */,
 				C2C503BA1DE73DC000604D71 /* VSettings.swift */,
 				C2C503BC1DE73DCE00604D71 /* VTutorial.swift */,
+				67F9B3831DEDB2B200604FE7 /* ProductTableViewController.swift */,
+				673C11501DEF0E7D00DFDD1D /* VProduct.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 				6720EAAF1DDC7046003CD432 /* Model.swift */,
 				67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */,
 				C205DCCF1DE304C800308147 /* CScannerReading.swift */,
+				673C11521DEF0F1F00DFDD1D /* CProduct.swift */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -234,9 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D30E9D1DEF101300E710A4 /* Main.storyboard in Resources */,
 				6719548C1DCC96040082D9AD /* LaunchScreen.storyboard in Resources */,
 				671954891DCC96040082D9AD /* Assets.xcassets in Resources */,
-				671954871DCC96040082D9AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */,
+				673C11511DEF0E7D00DFDD1D /* VProduct.swift in Sources */,
 				C2C503C31DE740FA00604D71 /* CProductTree.swift in Sources */,
 				671954841DCC96040082D9AD /* VHome.swift in Sources */,
 				C2C503CD1DE7413D00604D71 /* CTutorial.swift in Sources */,
+				67F9B3841DEDB2B200604FE7 /* ProductTableViewController.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
 				C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */,
 				C2C503AF1DE73CBD00604D71 /* VProductTree.swift in Sources */,
@@ -258,6 +269,7 @@
 				6719549C1DCD26380082D9AD /* CRegister.swift in Sources */,
 				67A385391DDCADD6001A7FDE /* VForgottenPassword.swift in Sources */,
 				C2C503AD1DE73C6800604D71 /* VFindShop.swift in Sources */,
+				673C11531DEF0F1F00DFDD1D /* CProduct.swift in Sources */,
 				C2C503BB1DE73DC000604D71 /* VSettings.swift in Sources */,
 				C2C503C71DE7412000604D71 /* CReview.swift in Sources */,
 				C2C503BF1DE740D900604D71 /* CAccueil.swift in Sources */,
@@ -282,20 +294,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		671954851DCC96040082D9AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				671954861DCC96040082D9AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6719548A1DCC96040082D9AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6719548B1DCC96040082D9AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		67D30E9B1DEF101300E710A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67D30E9C1DEF101300E710A4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
