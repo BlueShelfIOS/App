@@ -29,13 +29,22 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        var Text = searchController.searchBar.text
-        Text = Text?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        self.product = RequestProduct(Product: Text!)
-        self.filteredProduct = self.product
+        /*var Text = searchController.searchBar.text
+         Text = Text?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+         self.product = RequestProduct(Product: Text!)
+         self.filteredProduct = self.product*/
+        
+        self.filteredProduct = self.product.filter {(product:String) -> Bool in
+            if product.contains(self.searchController.searchBar.text!){
+                return true
+            } else {
+                return false
+            }
+        }
         self.resultsController.tableView.reloadData()
     }
-    
+
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -66,6 +75,9 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
         valueToPass = currentCell.textLabel?.text
+        /*----------------------------------------Problème à regler ---------------------------*/
+        searchController.isActive = false // Probleme du fait que si la bar de recherche est active la nouvelle view ne s'affiche pas
+        /*-------------------------------------------------------------------------------------*/
         performSegue(withIdentifier: "VProd", sender: self)
     }
     
