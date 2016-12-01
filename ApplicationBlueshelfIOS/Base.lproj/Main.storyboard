@@ -166,7 +166,7 @@
                                             <segue destination="UK5-Ni-xJu" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ltA-VZ-klh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bPl-h5-m3v" style="IBUITableViewCellStyleDefault" id="pMY-wO-QYB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FindMagasin" textLabel="bPl-h5-m3v" style="IBUITableViewCellStyleDefault" id="pMY-wO-QYB">
                                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pMY-wO-QYB" id="6a3-kN-kj7">
@@ -190,7 +190,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="SERVICES ET PRODUITS" id="cVP-nI-ekv">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vC6-eh-ltU" style="IBUITableViewCellStyleDefault" id="gAf-T7-FBK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParcourRayon" textLabel="vC6-eh-ltU" style="IBUITableViewCellStyleDefault" id="gAf-T7-FBK">
                                         <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gAf-T7-FBK" id="MQt-NK-bhe">
@@ -210,7 +210,7 @@
                                             <segue destination="2h5-3H-6Jx" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GK3-x9-nzK"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="QwL-ht-s68" style="IBUITableViewCellStyleDefault" id="y5H-SU-3tz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ALaUne" textLabel="QwL-ht-s68" style="IBUITableViewCellStyleDefault" id="y5H-SU-3tz">
                                         <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5H-SU-3tz" id="Lmw-QM-INQ">
@@ -234,7 +234,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="OUTILS" id="Uic-q4-Axo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JJC-0C-eL6" style="IBUITableViewCellStyleDefault" id="hXY-Qk-Ysn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Scanner" textLabel="JJC-0C-eL6" style="IBUITableViewCellStyleDefault" id="hXY-Qk-Ysn">
                                         <rect key="frame" x="0.0" y="232" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hXY-Qk-Ysn" id="UQw-o3-8pl">
@@ -258,7 +258,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="A PROPOS" id="zpn-MK-d30">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="60b-Tv-mLm" style="IBUITableViewCellStyleDefault" id="315-kf-pRp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Avis" textLabel="60b-Tv-mLm" style="IBUITableViewCellStyleDefault" id="315-kf-pRp">
                                         <rect key="frame" x="0.0" y="304" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="315-kf-pRp" id="lfM-wP-0L4">
@@ -278,7 +278,7 @@
                                             <segue destination="BvW-Ku-ksE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fJs-f1-iyS"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7BS-SD-2MR" style="IBUITableViewCellStyleDefault" id="svn-1z-3cX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Contacter" textLabel="7BS-SD-2MR" style="IBUITableViewCellStyleDefault" id="svn-1z-3cX">
                                         <rect key="frame" x="0.0" y="348" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svn-1z-3cX" id="wIs-2Y-C4g">
@@ -298,7 +298,7 @@
                                             <segue destination="C3p-8k-TGB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="E1q-SP-sKY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="zgM-tx-v73" style="IBUITableViewCellStyleDefault" id="OVe-pE-12o">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tutorial" textLabel="zgM-tx-v73" style="IBUITableViewCellStyleDefault" id="OVe-pE-12o">
                                         <rect key="frame" x="0.0" y="392" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OVe-pE-12o" id="bv7-7Z-mmf">
@@ -318,7 +318,7 @@
                                             <segue destination="9gV-Oe-b4Z" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="PLv-xz-byG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="USD-gZ-Bwh" style="IBUITableViewCellStyleDefault" id="kxo-2k-FQb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Parameters" textLabel="USD-gZ-Bwh" style="IBUITableViewCellStyleDefault" id="kxo-2k-FQb">
                                         <rect key="frame" x="0.0" y="436" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kxo-2k-FQb" id="qC4-A6-mVd">
@@ -350,22 +350,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0l-xK-VpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2564" y="-935"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kW8-Nf-4ZJ">
-            <objects>
-                <navigationController id="VCd-2f-v9R" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVd-Ak-zfk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NVQ-2F-lU2" kind="relationship" relationship="rootViewController" id="Usf-cI-34e"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y9y-2E-Pjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5294" y="-1675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qmx-9U-T6v">

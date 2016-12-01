@@ -23,6 +23,7 @@ class VProduct: UIViewController {
         ProductController.RequestProduct(Product: passedValue)
         self.LblNameProduct.text = passedValue
         self.LblPriceProduct.text = ProductController.Price
+        self.LblDescriptionProduct.text = ProductController.Description
 
         // Do any additional setup after loading the view.
     }

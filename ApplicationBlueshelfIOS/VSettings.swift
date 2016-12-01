@@ -15,7 +15,7 @@ class VSettings: UIViewController {
         super.viewDidLoad()
 
         Btn_OpenMenu.target = self.revealViewController()
-        Btn_OpenMenu.action = Selector("revealToggle:")
+        Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         

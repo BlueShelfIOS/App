@@ -61,7 +61,7 @@ class CProduct {
         if let item = json[0] as? [String: AnyObject] {
             print (item)
             self.Price = item["price"] as! String
-            //self.Price = item["description"] as! String
+            self.Description = item["description"] as! String
         }
     }
 }
