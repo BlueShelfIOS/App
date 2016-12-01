@@ -9,14 +9,16 @@
 import UIKit
 
 class ProductTableViewController: UITableViewController, UISearchResultsUpdating{
-
     
-    var product = ["clous", "vis", "marteau", "tournevis", "planche bois"]
+    var product = [String]()
+    var filteredProduct = [String]()
     var searchController : UISearchController!
     var resultsController = UITableViewController()
+    var valueToPass:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        product = RequestProduct(Product: "")
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
         self.searchController = UISearchController(searchResultsController: resultsController)
@@ -24,35 +26,42 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
 
-
     }
+    
     func updateSearchResults(for searchController: UISearchController) {
         var Text = searchController.searchBar.text
         Text = Text?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
         self.product = RequestProduct(Product: Text!)
+        self.filteredProduct = self.product
         self.resultsController.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-                  }
-
-  
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.product.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (tableView == self.tableView) {
+            return self.product.count
+        }
+        else {
+            return self.filteredProduct.count
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = self.product[indexPath.row]
+        if (tableView == self.tableView) {
+            cell.textLabel?.text = self.product[indexPath.row]
+        }
+        else  {
+            cell.textLabel?.text = self.filteredProduct[indexPath.row]
+        }
         return cell
     }
-    var valueToPass:String!
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-   
+        
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
@@ -60,8 +69,7 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         performSegue(withIdentifier: "VProd", sender: self)
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "VProd") {
             // initialize new view controller and cast it as your view controller
             let viewController = segue.destination as! VProduct

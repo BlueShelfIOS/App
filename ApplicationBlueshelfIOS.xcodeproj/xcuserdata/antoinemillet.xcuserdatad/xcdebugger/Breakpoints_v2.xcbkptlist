@@ -89,12 +89,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ApplicationBlueshelfIOS/ProductTableViewController.swift"
-            timestampString = "502211901.651388"
+            timestampString = "502284048.876459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "Deserializer(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApplicationBlueshelfIOS/CUser.swift"
+            timestampString = "502281060.863518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "ModifyUserLastNameInformation(LastName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

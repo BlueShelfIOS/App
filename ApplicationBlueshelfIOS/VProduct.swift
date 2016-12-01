@@ -12,9 +12,17 @@ class VProduct: UIViewController {
 
     var passedValue:String = ""
     
+    var ProductController = CProduct()
+    @IBOutlet weak var LblNameProduct: UILabel!
+    @IBOutlet weak var ImgProduct: UIImageView!
+    @IBOutlet weak var LblPriceProduct: UILabel!
+    @IBOutlet weak var LblDescriptionProduct: UILabel!
+    
       override func viewDidLoad() {
         super.viewDidLoad()
-        print ("OHH yeah = \(self.passedValue)")
+        ProductController.RequestProduct(Product: passedValue)
+        self.LblNameProduct.text = passedValue
+        self.LblPriceProduct.text = ProductController.Price
 
         // Do any additional setup after loading the view.
     }
