@@ -27,31 +27,24 @@ class VForgottenPassword: UIViewController {
     
     @IBAction func BtnValidate_OnClick(_ sender: Any) {
         if (ControllerForgotenPassword.VerifyEmail(Email: self.TxtbEmail.text!) == false){
-            let alert = UIAlertView()
-            alert.title = "Erreur"
-            alert.message = "Adresse mail incorect, Veuillez réesayer."
-            alert.addButton(withTitle: "OK")
-            alert.show()
-
+            let alert = UIAlertController(title: "Erreur", message: "Adresse mail incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
         }
         let resul = ControllerForgotenPassword.RequestPostResetPassword(Email: self.TxtbEmail.text!)
         if resul == 201
         {
-            let alert = UIAlertView()
-            alert.title = "Confirmation"
-            alert.message = "Un mail a bien été envoyé à cette adresse."
-            alert.addButton(withTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: "Erreur", message: "Un mail a bien été envoyé à cette adresse.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         if resul == 400
         {
-            let alert = UIAlertView()
-            alert.title = "Erreur"
-            alert.message = "Adresse mail incorect, Veuillez réesayer."
-            alert.addButton(withTitle: "OK")
-            alert.show()
-                  }
+            let alert = UIAlertController(title: "Erreur", message: "Adresse mail incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     /*

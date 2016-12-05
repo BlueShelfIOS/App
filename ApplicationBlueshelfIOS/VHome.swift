@@ -58,19 +58,15 @@ class VHome: UIViewController {
         }
         if resul == 400
         {
-            let alert = UIAlertView()
-            alert.title = "Erreur"
-            alert.message = "Adresse mail ou mot de passe incorect, Veuillez réesayer."
-            alert.addButton(withTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: "Erreur", message: "Adresse mail ou mot de passe incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         if resul == -1
         {
-            let alert = UIAlertView()
-            alert.title = "Erreur"
-            alert.message = "Une erreur est survenue, Veuillez réesayer ultérieurement."
-            alert.addButton(withTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, Veuillez réesayer ultérieurement.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
 
     }

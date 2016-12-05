@@ -1,24 +1,30 @@
 //
-//  VSettings.swift
+//  VProduct.swift
 //  ApplicationBlueshelfIOS
 //
-//  Created by Maxime Dulin on 11/24/16.
+//  Created by Antoine Millet on 30/11/2016.
 //  Copyright © 2016 Antoine Millet. All rights reserved.
 //
 
 import UIKit
 
-class VSettings: UIViewController {
+class VProduct: UIViewController {
 
-    @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
-    override func viewDidLoad() {
+    var passedValue:String = ""
+    
+    var ProductController = CProduct()
+    @IBOutlet weak var LblNameProduct: UILabel!
+    @IBOutlet weak var ImgProduct: UIImageView!
+    @IBOutlet weak var LblPriceProduct: UILabel!
+    @IBOutlet weak var LblDescriptionProduct: UILabel!
+    
+      override func viewDidLoad() {
         super.viewDidLoad()
+        ProductController.RequestProduct(Product: passedValue)
+        self.LblNameProduct.text = passedValue
+        self.LblPriceProduct.text = ProductController.Price
+        self.LblDescriptionProduct.text = ProductController.Description
 
-        Btn_OpenMenu.target = self.revealViewController()
-        Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
         // Do any additional setup after loading the view.
     }
 

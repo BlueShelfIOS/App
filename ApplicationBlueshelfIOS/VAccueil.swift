@@ -8,36 +8,29 @@
 
 import UIKit
 
-class VAccueil: UIViewController {
+class VAccueil: UIViewController , UISearchBarDelegate{
 
     @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
         Btn_OpenMenu.target = self.revealViewController()
-        Btn_OpenMenu.action = Selector("revealToggle:")
+        Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
-        // Do any additional setup after loading the view.
-    }
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Oh yeah")
     }
-    */
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Oh yeah2")
+    }
+   
 }

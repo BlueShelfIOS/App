@@ -51,7 +51,7 @@ class CUser {
         let task = URLSession.shared.dataTask(with: request)
         {
             data, response, error in
-            guard let data = data, error == nil else
+            guard let _ = data, error == nil else
             {
                 ReturnCode = -1
                 semaphore.signal()
@@ -82,7 +82,7 @@ class CUser {
         let task = URLSession.shared.dataTask(with: request)
         {
             data, response, error in
-            guard let data = data, error == nil else
+            guard let _ = data, error == nil else
             {
                 ReturnCode = -1
                 semaphore.signal()
@@ -113,7 +113,7 @@ class CUser {
         let task = URLSession.shared.dataTask(with: request)
         {
             data, response, error in
-            guard let data = data, error == nil else
+            guard let _ = data, error == nil else
             {
                 ReturnCode = -1
                 semaphore.signal()
