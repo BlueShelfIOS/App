@@ -35,6 +35,7 @@ class CUser {
                 semaphore.signal()
             }
         }
+        //test
         task.resume()
         semaphore.wait()
         print(ReturnCode)
