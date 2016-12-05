@@ -15,8 +15,10 @@ class VScannerReading: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
 
     @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
     
+    var ScannerController = CScannerReading()
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var nameProduct:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,8 @@ class VScannerReading: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
         Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+
+        view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
         let videoCaptureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
@@ -88,15 +91,26 @@ class VScannerReading: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
             barcodeDetected(code: readableObject.stringValue);
         }
         
-        dismiss(animated: true)
+        performSegue(withIdentifier: "VProd2", sender: self)
+        
+        self.viewDidLoad()
     }
     
     func barcodeDetected(code: String) {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
         captureSession.stopRunning()
-        let ac = UIAlertController(title: "Succès", message: "Le code bar a été lu avec succès", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        self.captureSession = nil
+        
+        nameProduct = ScannerController.GetItemByCode(code: code) as String!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "VProd2") {
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! VProduct
+            // your new view controller should have property that will store passed value
+            viewController.passedValue = nameProduct
+        }
     }
     
     func scanningNotPossible() {
