@@ -355,7 +355,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qmx-9U-T6v">
             <objects>
-                <navigationController id="2h5-3H-6Jx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NProductTree" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2h5-3H-6Jx" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yWD-LV-T2C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -536,7 +536,7 @@
         <!--Settings-->
         <scene sceneID="QTt-8E-mzB">
             <objects>
-                <viewController id="dX9-y2-CqY" customClass="VSettings" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dX9-y2-CqY" customClass="VSettings" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PRC-AS-hJK"/>
                         <viewControllerLayoutGuide type="bottom" id="eWK-oK-jW0"/>
@@ -584,7 +584,7 @@
         <!--Navigation Controller-->
         <scene sceneID="AJY-jg-4ZD">
             <objects>
-                <navigationController id="dWI-Qe-dWS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NScannerReading" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dWI-Qe-dWS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oIX-AL-gnW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -600,7 +600,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2XK-To-dNc">
             <objects>
-                <navigationController id="UK5-Ni-xJu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NAcceuil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UK5-Ni-xJu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Od-8z-jB7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1033,7 +1033,7 @@
         <!--Navigation Controller-->
         <scene sceneID="0mI-Zd-aDy">
             <objects>
-                <navigationController id="EmY-S8-Cet" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NNews" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EmY-S8-Cet" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WTq-Lw-TQj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1049,7 +1049,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EXP-6z-Hqz">
             <objects>
-                <navigationController id="BvW-Ku-ksE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NReview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BvW-Ku-ksE" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qBL-fX-aCP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1065,7 +1065,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Hk1-ji-5gh">
             <objects>
-                <navigationController id="C3p-8k-TGB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NContact" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C3p-8k-TGB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RpG-Sh-GHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1081,7 +1081,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ylq-mB-rI0">
             <objects>
-                <navigationController id="Bsm-Cw-E6M" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NFindShop" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bsm-Cw-E6M" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZY7-L5-85C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1097,7 +1097,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RvX-V8-cSd">
             <objects>
-                <navigationController id="9gV-Oe-b4Z" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9gV-Oe-b4Z" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1kN-Pj-0uL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1113,7 +1113,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UaV-d2-dK5">
             <objects>
-                <navigationController id="jVf-0P-YQK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NTutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jVf-0P-YQK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IaH-Mr-ZbO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
