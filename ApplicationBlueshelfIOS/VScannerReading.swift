@@ -60,7 +60,6 @@ class VScannerReading: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
         view.layer.addSublayer(previewLayer);
         
         captureSession.startRunning();
-        print("LA CA PASSE 1")
     }
     
     override func viewWillAppear(_ animated: Bool) {
