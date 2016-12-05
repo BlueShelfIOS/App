@@ -6,6 +6,8 @@
 //  Copyright © 2016 Antoine Millet. All rights reserved.
 //
 
+// TOTOT TA MERE LA PUTE
+
 import UIKit
 
 class VScannerReading: UIViewController {
