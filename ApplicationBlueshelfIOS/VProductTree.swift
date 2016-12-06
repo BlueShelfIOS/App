@@ -12,14 +12,26 @@ class VProductTree: UIViewController {
 
     @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
    
+    var ProductTreeController = CProductTree()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var CategoryArray = Array<Product_category>()
+        
         Btn_OpenMenu.target = self.revealViewController()
         Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        CategoryArray = ProductTreeController.FindAllCategory()
+        
+        for cat in CategoryArray {
+            print("CATEGORY = " + cat.getId())
+            for p in cat.getProducts() {
+                print("NAME = " + p.getName() + " - PRICE = " + p.getPrice())
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

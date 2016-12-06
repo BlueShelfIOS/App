@@ -24,6 +24,8 @@
 		C205DCD01DE304C800308147 /* CScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205DCCF1DE304C800308147 /* CScannerReading.swift */; };
 		C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */; };
 		C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */; };
+		C26F95D61DF6BE4E00B0BF55 /* Product_category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F95D51DF6BE4E00B0BF55 /* Product_category.swift */; };
+		C26F95D81DF6BF7000B0BF55 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F95D71DF6BF7000B0BF55 /* Product.swift */; };
 		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
 		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
 		C2C503AB1DE732B700604D71 /* VAccueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AA1DE732B700604D71 /* VAccueil.swift */; };
@@ -66,6 +68,8 @@
 		C24B026A1DE7055C005AACE0 /* ApplicationBlueshelfIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationBlueshelfIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		C24B026B1DE7055D005AACE0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C24B026C1DE7055D005AACE0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C26F95D51DF6BE4E00B0BF55 /* Product_category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product_category.swift; sourceTree = "<group>"; };
+		C26F95D71DF6BF7000B0BF55 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
 		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
 		C2C503AA1DE732B700604D71 /* VAccueil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAccueil.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
+				C26F95D41DF6BE3100B0BF55 /* Classes */,
 				67D30E9B1DEF101300E710A4 /* Main.storyboard */,
 				C2C503D01DE741D900604D71 /* Support */,
 				C2C503CF1DE741A300604D71 /* Controler */,
@@ -126,6 +131,15 @@
 				6719548D1DCC96040082D9AD /* Info.plist */,
 			);
 			path = ApplicationBlueshelfIOS;
+			sourceTree = "<group>";
+		};
+		C26F95D41DF6BE3100B0BF55 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C26F95D51DF6BE4E00B0BF55 /* Product_category.swift */,
+				C26F95D71DF6BF7000B0BF55 /* Product.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		C2C503CE1DE7419700604D71 /* View */ = {
@@ -261,6 +275,7 @@
 				C2C503C31DE740FA00604D71 /* CProductTree.swift in Sources */,
 				671954841DCC96040082D9AD /* VHome.swift in Sources */,
 				C2C503CD1DE7413D00604D71 /* CTutorial.swift in Sources */,
+				C26F95D81DF6BF7000B0BF55 /* Product.swift in Sources */,
 				67F9B3841DEDB2B200604FE7 /* ProductTableViewController.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
 				C24B022B1DE6FA89005AACE0 /* VScannerReading.swift in Sources */,
@@ -277,6 +292,7 @@
 				C2C503CB1DE7413400604D71 /* CSettings.swift in Sources */,
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CHome.swift in Sources */,
+				C26F95D61DF6BE4E00B0BF55 /* Product_category.swift in Sources */,
 				C2C503B91DE73DB100604D71 /* VContact.swift in Sources */,
 				C2C503C11DE740ED00604D71 /* CFindShop.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
