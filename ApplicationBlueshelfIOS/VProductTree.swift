@@ -8,16 +8,17 @@
 
 import UIKit
 
-class VProductTree: UIViewController {
+class VProductTree: UICollectionViewController {
 
     @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
    
     var ProductTreeController = CProductTree()
+    var CategoryArray = Array<Product_category>()
+    let reuseIdentifier = "CategoryCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var CategoryArray = Array<Product_category>()
         
         Btn_OpenMenu.target = self.revealViewController()
         Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -40,6 +41,23 @@ class VProductTree: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return CategoryArray.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection index: Int) -> Int {
+        return CategoryArray[index].getProducts().count
+    }
+    
+    /*override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                      for: indexPath) as! CategoryCell
+        cell.backgroundColor = UIColor.black
+        // Configure the cell
+        return cell
+    }*/
 
     /*
     // MARK: - Navigation
