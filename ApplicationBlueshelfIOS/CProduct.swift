@@ -10,6 +10,7 @@ import Foundation
 
 class CProduct {
     
+    var ID = Int();
     var Description = String()
     var Price = String()
     var name = String()
@@ -59,9 +60,11 @@ class CProduct {
             print(error)
         }
         if let item = json[0] as? [String: AnyObject] {
-            print (item)
+            //print (item)
             self.Price = item["price"] as! String
             self.Description = item["description"] as! String
+            self.ID = item["id"] as! Int
         }
     }
-}
+    
+   }

@@ -33,6 +33,13 @@ class VProduct: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func AddListOnClick(_ sender: Any) {
+       ModelArticle.addElemListeDeCousre(name: ProductController.name, ID: ProductController.ID)
+        let alert = UIAlertController(title: "Confirmation", message: "Le produit a été ajouté à votre liste de course.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+    }
 
     /*
     // MARK: - Navigation

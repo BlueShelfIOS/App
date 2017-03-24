@@ -8,8 +8,6 @@
 
 import Foundation
 
-let ModelData = Model()
-
 class CHome {
 
     func RequestPostConnection(Username: String, PassWord: String) -> Int {

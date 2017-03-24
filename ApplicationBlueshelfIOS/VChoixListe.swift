@@ -1,41 +1,37 @@
- //
-//  ProductTableViewController.swift
+//
+//  VChoixListe.swift
 //  ApplicationBlueshelfIOS
 //
-//  Created by Antoine Millet on 29/11/2016.
-//  Copyright © 2016 Antoine Millet. All rights reserved.
+//  Created by Antoine Millet on 06/03/2017.
+//  Copyright © 2017 Antoine Millet. All rights reserved.
 //
 
 import UIKit
 
-class ProductTableViewController: UITableViewController, UISearchResultsUpdating{
+class VChoixListe: UITableViewController, UISearchResultsUpdating {
     
-    var product = [String]()
+    var ListID = [String:Int]();
+    var List = [String]();
     var filteredProduct = [String]()
     var searchController : UISearchController!
     var resultsController = UITableViewController()
+    
     var valueToPass:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        product = RequestProduct(Product: "")
+         List = RequestGetList()
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
         self.searchController = UISearchController(searchResultsController: resultsController)
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
-
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        /*var Text = searchController.searchBar.text
-         Text = Text?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-         self.product = RequestProduct(Product: Text!)
-         self.filteredProduct = self.product*/
-        
-        self.filteredProduct = self.product.filter {(product:String) -> Bool in
-            if product.contains(self.searchController.searchBar.text!){
+        self.filteredProduct = self.List.filter {(Name:String) -> Bool in
+            if List.contains(self.searchController.searchBar.text!){
                 return true
             } else {
                 return false
@@ -43,15 +39,15 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         }
         self.resultsController.tableView.reloadData()
     }
-
- 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView == self.tableView) {
-            return self.product.count
+            return self.List.count
         }
         else {
             return self.filteredProduct.count
@@ -61,7 +57,7 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         if (tableView == self.tableView) {
-            cell.textLabel?.text = self.product[indexPath.row]
+            cell.textLabel?.text = self.List[indexPath.row]
         }
         else  {
             cell.textLabel?.text = self.filteredProduct[indexPath.row]
@@ -69,65 +65,73 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
         valueToPass = currentCell.textLabel?.text
-        /*----------------------------------------Problème à regler ---------------------------*/
-        searchController.isActive = false // Probleme du fait que si la bar de recherche est active la nouvelle view ne s'affiche pas
-        /*-------------------------------------------------------------------------------------*/
-        performSegue(withIdentifier: "VProd", sender: self)
+        searchController.isActive = false
+        
+        performSegue(withIdentifier: "VProd3", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "VProd") {
-            // initialize new view controller and cast it as your view controller
-            let viewController = segue.destination as! VProduct
-            // your new view controller should have property that will store passed value
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if (segue.identifier == "VProd3")
+        {
+            let viewController = segue.destination as! VList
             viewController.passedValue = valueToPass
+            
         }
     }
-    /*---------------------- REQUETE JSON ---------------------------*/
-    
-    func RequestProduct(Product: String) -> Array<String>{
+    @IBAction func ONclickTest(_ sender: Any) {
+        print("okey");
+    }
+    func RequestGetList() -> Array<String>
+    {
         var product: Array<String>!
-        var urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products?_format=json&name="
-        urlApi += Product
-        //print ("Requete :\(urlApi)")
+        print("yep")
+        let urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products/list?_format=json"
         var request = URLRequest(url: URL(string: urlApi)!)
         request.httpMethod = "GET"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
-        var ReturnCode = 0
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request)
         {
             data, response, error in
-            guard let data = data, error == nil else
+            guard let _ = data, error == nil else
             {
-                ReturnCode = -1
+                
                 semaphore.signal()
                 return // Error Connection
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
-                ReturnCode = 200
-                product = self.Deserializer(data: data)
+                let responseString = try? JSONSerialization.jsonObject(with: data!, options: [])
+                print("responseString = \(responseString)")
+                product = self.Deserializer(data: data!)
                 semaphore.signal()
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
-                ReturnCode = 401
                 semaphore.signal()
             }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 500 {
+                semaphore.signal() // Internal error
+            }
+            
         }
         task.resume()
         semaphore.wait()
-       // print(ReturnCode)
-        return(product)
+        return (product)
     }
     
     func Deserializer(data: Data) -> Array<String>{
+       
         var product: [String] = []
+        if (ModelArticle.getSizeOfListeDeCourse() > 0) {
+            product.append("Nouvelle Liste")
+            ListID["Nouvelle Liste"] = -1;
+        }
         var json: Array<Any>!
         do {
             json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? Array
@@ -140,8 +144,10 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
                 print (json[i])
                 if let item = json[i] as? [String: AnyObject] {
                     let name = item["name"] as! String
+                    let id = item["id"] as! Int
                     if (name != ""){
                         product.append(name)
+                        ListID[name] = id
                     }
                 }
                 i += 1
@@ -149,4 +155,24 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         }
         return (product)
     }
- }
+
+    
+       override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+            var temp1 : String!
+            temp1 = currentCell.textLabel?.text
+            List = List.filter(){ $0 != temp1}
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            
+            
+            // handle delete (by removing the data from your array and updating the tableview)
+        }
+        
+        
+    }
+}
