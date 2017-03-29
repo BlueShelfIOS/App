@@ -26,4 +26,17 @@ public class ListArticle {
     func getSizeOfListeDeCourse() -> Int{
         return ListeDeCourse.count
     }
+    
+    func getListeProduit() -> String{
+        var ListIdProduit = String()
+        for (_, ID) in ListeDeCourse
+        {
+            let IdProduit = String(ID)
+            ListIdProduit += IdProduit
+            ListIdProduit += ";"
+        }
+        var truncated = String()
+        truncated = ListIdProduit.substring(to: ListIdProduit.index(before: ListIdProduit.endIndex))
+        return (truncated)
+    }
 }
