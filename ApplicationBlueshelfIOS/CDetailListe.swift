@@ -13,7 +13,11 @@ class CDetailListe {
     
     var ListeProduitNom_Id = [String:Int]()
     var ListeProduitNom = [String]()
+    var Retour = Int()
     
+    func getRetour() -> Int {
+        return Retour
+    }
     
     func getListProduitNom() -> [String] {
         return (ListeProduitNom)
@@ -83,50 +87,46 @@ class CDetailListe {
     }
 
     
-    func RequestPostList(ListProduct:String)
+    func RequestPostList(ListProduitId:String, NomListe:String)
     {
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/products/list")!)
+        let postString = "_format=json&id_products=" + ListProduitId + "&name=" + NomListe
         request.httpMethod = "POST"
-        request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
-        let postString = "id_product=" + ListProduct + "name=" + "test"
         request.httpBody = postString.data(using: .utf8)
-        let semaphore = DispatchSemaphore(value: 0);
-        _ = URLSession.shared.dataTask(with: request)
-        {
-            
-            data, response, error in
-            guard let data = data, error == nil else
-            {
-                semaphore.signal()
-                return // Error Connection
+        request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
+        let semaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let _ = data, error == nil else {
+                print("error=\(error)")
+                self.Retour = -1
+                return
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
-                let responseString = String(data: data, encoding: .utf8) // token
-                print("responseString = \(responseString)")
                 semaphore.signal()
             }
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
                 semaphore.signal()
+                self.Retour = 401
             }
-        }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 500 {
+                semaphore.signal()
+                self.Retour = 500
+            }
+            }
+        task.resume()
     }
     
-    @IBAction func OnclickSave(_ sender: Any) {
-        print("putain")
-        let product = ModelArticle.getListeDeCourse()
-        var ListProduct = String();
-        for (_, ID) in product
+    
+    func getListeProduitId() -> String {
+        var ListeProduitId = String()
+        for (_, ID) in ListeProduitNom_Id
         {
-            let myString = String(ID)
-            ListProduct += myString
-            ListProduct += ";"
+            let newString = String(ID)
+            ListeProduitId += newString
+            ListeProduitId += ";"
         }
-        ListProduct = ListProduct.substring(to: ListProduct.index(before: ListProduct.endIndex))
-        print(ListProduct);
-        RequestPostList(ListProduct: ListProduct)
+        var truncated = String()
+        truncated = ListeProduitId.substring(to: ListeProduitId.index(before: ListeProduitId.endIndex))
+        return (truncated)
     }
-
-    
-    
-    
 }

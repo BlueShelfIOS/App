@@ -18,10 +18,12 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
     var CListe = CChoixListe()
     
     var valueToPass:String!
+    var valueToPass2:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CListe.RequestGetList()
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
         ListDeCourseNom = CListe.getListeDeCourseNom()
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
@@ -29,9 +31,10 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
-    }
+         }
     
-    func updateSearchResults(for searchController: UISearchController) {
+    
+       func updateSearchResults(for searchController: UISearchController) {
         self.filteredProduct = self.ListDeCourseNom.filter {(Name:String) -> Bool in
             if ListDeCourseNom.contains(self.searchController.searchBar.text!){
                 return true
@@ -72,6 +75,7 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         valueToPass = CListe.getListeProduit(NomListe: (currentCell.textLabel?.text)!)
+        valueToPass2 = currentCell.textLabel?.text
         searchController.isActive = false
         performSegue(withIdentifier: "VProd3", sender: self)
     }
@@ -82,6 +86,7 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
         {
             let viewController = segue.destination as! VList
             viewController.passedValue = valueToPass
+            viewController.NomListe = valueToPass2
         }
     }
     
@@ -93,6 +98,7 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
         return true
     }
     
+        
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
@@ -102,6 +108,5 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
         
-        
-    }
+       }
 }

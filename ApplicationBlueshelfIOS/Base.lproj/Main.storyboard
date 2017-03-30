@@ -1344,7 +1344,7 @@
                             </barButtonItem>
                             <barButtonItem title="Sauvegarder" id="xkT-SF-nKk">
                                 <connections>
-                                    <action selector="OnclickSave:" destination="jiE-ou-BLr" id="L2D-hs-hO1"/>
+                                    <action selector="BtnSave_Click:" destination="jiE-ou-BLr" id="lFj-fi-God"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Effacer" id="7OP-c4-xSB"/>
@@ -1383,7 +1383,7 @@
         <image name="user" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ltA-VZ-klh"/>
+        <segue reference="mi0-1d-LLa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.00046688408469999998" green="0.37297207119999998" blue="0.39074826239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
