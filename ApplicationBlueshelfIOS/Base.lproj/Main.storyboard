@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Connection-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="VHome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VHome" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VHome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VConnection" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -764,10 +764,10 @@
             </objects>
             <point key="canvasLocation" x="1493" y="2191"/>
         </scene>
-        <!--Choix Liste-->
+        <!--Choose List-->
         <scene sceneID="CMg-X4-Sk1">
             <objects>
-                <tableViewController storyboardIdentifier="VChoixListe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ehk-08-n4m" customClass="VChoixListe" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="VChoixListe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ehk-08-n4m" customClass="VChooseList" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J0w-Vf-Vyn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -795,10 +795,10 @@
             </objects>
             <point key="canvasLocation" x="586" y="1368"/>
         </scene>
-        <!--Accueil-->
+        <!--Home-->
         <scene sceneID="7JX-jR-rBl">
             <objects>
-                <viewController storyboardIdentifier="VAccueil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="drp-YP-za2" customClass="VAccueil" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VAccueil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="drp-YP-za2" customClass="VHome" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ghd-9g-IA5"/>
                         <viewControllerLayoutGuide type="bottom" id="yjv-SW-vCJ"/>
@@ -1299,10 +1299,10 @@
             </objects>
             <point key="canvasLocation" x="3470" y="-2641"/>
         </scene>
-        <!--List-->
+        <!--Detail List-->
         <scene sceneID="2ET-Fu-vex">
             <objects>
-                <tableViewController id="jiE-ou-BLr" customClass="VList" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jiE-ou-BLr" customClass="VDetailList" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wXV-yN-dEN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1386,7 +1386,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mi0-1d-LLa"/>
-        <segue reference="jwn-hf-6LQ"/>
+        <segue reference="JY4-aK-BgB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.00046688408469999998" green="0.37297207119999998" blue="0.39074826239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

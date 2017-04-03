@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VList: UITableViewController, UISearchResultsUpdating{
+class VDetailList: UITableViewController, UISearchResultsUpdating{
     var passedValue = String();
     var ListeProduitNom = [String]()
     @IBOutlet weak var BtnSaveList: UIBarButtonItem!
@@ -17,7 +17,7 @@ class VList: UITableViewController, UISearchResultsUpdating{
     var resultsController = UITableViewController()
     var valueToPass:String!
     var NomListe:String!
-    var CListe = CDetailListe()
+    var CListe = CDetailList()
     
     
     override func viewDidLoad() {

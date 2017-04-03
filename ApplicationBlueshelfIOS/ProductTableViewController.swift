@@ -95,7 +95,6 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         var product: Array<String>!
         var urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products?_format=json&name="
         urlApi += Product
-        //print ("Requete :\(urlApi)")
         var request = URLRequest(url: URL(string: urlApi)!)
         request.httpMethod = "GET"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
@@ -122,7 +121,6 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         }
         task.resume()
         semaphore.wait()
-       // print(ReturnCode)
         return(product)
     }
     
@@ -137,7 +135,6 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         if json.count > 0 {
             var i = 0
             while (i < json.count){
-                print (json[i])
                 if let item = json[i] as? [String: AnyObject] {
                     let name = item["name"] as! String
                     if (name != ""){

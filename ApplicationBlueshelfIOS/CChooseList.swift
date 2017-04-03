@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CChoixListe {
+class CChooseList {
     
     var ListeDeCourseNom_Id = [String:String]()
     var ListeDeCourseNom = [String]()
@@ -79,7 +79,6 @@ class CChoixListe {
         if json.count > 0 {
             var i = 0
             while (i < json.count){
-                print (json[i])
                 if let item = json[i] as? [String: AnyObject] {
                     let name = item["name"] as! String
                     let listeId = item["listId"] as! String

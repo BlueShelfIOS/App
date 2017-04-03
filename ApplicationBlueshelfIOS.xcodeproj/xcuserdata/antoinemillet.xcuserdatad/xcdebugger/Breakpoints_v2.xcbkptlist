@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ApplicationBlueshelfIOS/ProductTableViewController.swift"
-            timestampString = "512864470.097329"
+            timestampString = "512879866.944939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "Deserializer(data:)"
             landmarkType = "7">
          </BreakpointContent>

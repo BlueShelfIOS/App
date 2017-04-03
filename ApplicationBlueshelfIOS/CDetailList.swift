@@ -8,8 +8,7 @@
 
 import Foundation
 
-class CDetailListe {
-    
+class CDetailList {
     
     var ListeProduitNom_Id = [String:Int]()
     var ListeProduitNom = [String]()
@@ -50,7 +49,6 @@ class CDetailListe {
         let newString = Product.replacingOccurrences(of: ";", with: ",", options: .literal, range: nil)
         var urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products?_format=json&id="
         urlApi += newString
-        print(urlApi)
         var request = URLRequest(url: URL(string: urlApi)!)
         request.httpMethod = "GET"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
@@ -91,7 +89,6 @@ class CDetailListe {
         if json.count > 0 {
             var i = 0
             while (i < json.count){
-                print (json[i])
                 if let item = json[i] as? [String: AnyObject] {
                     let nomProduit = item["name"] as! String
                     let idProduit = item["id"] as! Int

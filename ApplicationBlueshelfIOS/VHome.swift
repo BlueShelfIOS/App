@@ -1,75 +1,38 @@
 //
-//  VHome.swift
+//  VAccueil.swift
 //  ApplicationBlueshelfIOS
 //
-//  Created by Antoine Millet on 04/11/2016.
+//  Created by Maxime Dulin on 11/24/16.
 //  Copyright © 2016 Antoine Millet. All rights reserved.
 //
 
 import UIKit
 
-class VHome: UIViewController {
+class VHome: UIViewController , UISearchBarDelegate{
+
+    @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
+    @IBOutlet weak var TopBar: UINavigationItem!
+    var Home = CHome();
 
 
-   
-    @IBOutlet weak var TxtfUser: UITextField!
-    @IBOutlet weak var TxtfPassword: UITextField!
-    @IBOutlet weak var BtnValidate: UIButton!
-    @IBOutlet weak var BtnForgottenPassword: UIButton!
-    @IBOutlet weak var BtnRegister: UIButton!
-    var ControllerHome = CHome()
-    
-    
-     override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        navigationController?.navigationBar.barTintColor = Home.hexStringToUIColor(hex: "#025F64")
+        Btn_OpenMenu.target = self.revealViewController()
+        Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func TxtfPassword(_ sender: Any) {
-        self.TxtfPassword.isSecureTextEntry = true
+    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Oh yeah")
     }
 
-    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
-        
-        // create the alert
-        let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-
-    @IBAction func BtnValidate_OnClick(_ sender: Any) {
-        let UserName = self.TxtfUser.text
-        let  Password =  self.TxtfPassword.text
-        let resul = ControllerHome.RequestPostConnection(Username: UserName! , PassWord: Password!)
-        if resul == 201
-        {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewDisplayer")
-            self.present(vc, animated: true, completion: nil)
-        }
-        if resul == 400
-        {
-            let alert = UIAlertController(title: "Erreur", message: "Adresse mail ou mot de passe incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        if resul == -1
-        {
-            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, Veuillez réesayer ultérieurement.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-
-    }
-    
-}
-
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Oh yeah2")
+    }*/
+   }

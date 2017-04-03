@@ -8,14 +8,14 @@
 
 import UIKit
 
-class VChoixListe: UITableViewController, UISearchResultsUpdating {
+class VChooseList: UITableViewController, UISearchResultsUpdating {
     
     var ListDeCourseNom_Id = [String:String]();
     var ListDeCourseNom = [String]();
     var filteredProduct = [String]()
     var searchController : UISearchController!
     var resultsController = UITableViewController()
-    var CListe = CChoixListe()
+    var CListe = CChooseList()
     
     var valueToPass:String!
     var valueToPass2:String!
@@ -84,15 +84,12 @@ class VChoixListe: UITableViewController, UISearchResultsUpdating {
     {
         if (segue.identifier == "VProd3")
         {
-            let viewController = segue.destination as! VList
+            let viewController = segue.destination as! VDetailList
             viewController.passedValue = valueToPass
             viewController.NomListe = valueToPass2
         }
     }
     
-    @IBAction func ONclickTest(_ sender: Any) {
-        print("okey");
-    }
 
        override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
