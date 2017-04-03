@@ -10,10 +10,42 @@ import Foundation
 
 public class ListArticle {
     
-    public var ListeDeCourse = [String:Int]();
+    public var Mode = Int();    // 0 ajout liste de course par defaut - 1 ajout liste de course modifié
+    public var ListeDeCourse = [String:Int](); // uniquement pour creation de liste par defaut 
+    
+    public var ListeDeCourseModifié = [String:Int](); // var global pour enregistrer les nouveaux produits 
+    
+    
+    func setMode(mode:Int){
+        self.Mode = mode
+    }
+    
+    func getMode() ->Int{
+        return(self.Mode)
+    }
+    
+    func getListeDeCourseModifié() -> [String:Int]{
+        return(ListeDeCourseModifié);
+    }
+    
+    func RemoveListeDeCourseModifié(){
+        ListeDeCourseModifié = [String:Int]()
+    }
+    
+    func RemoveListeDeCourse() {
+        ListeDeCourse = [String:Int]();
+    }
     
     func getListeDeCourse() -> [String:Int]{
         return(ListeDeCourse);
+    }
+    
+    func getNumberArticleListeDeCourseModifié() -> Int{
+        return(ListeDeCourseModifié.count)
+    }
+    
+    func addElemListeDeCourseModifié(name:String, ID:Int){
+        ListeDeCourseModifié[name] = ID;
     }
     
     func addElemListeDeCousre(name:String, ID:Int){

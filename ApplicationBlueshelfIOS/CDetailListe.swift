@@ -15,6 +15,7 @@ class CDetailListe {
     var ListeProduitNom = [String]()
     var Retour = Int()
     
+    
     func getRetour() -> Int {
         return Retour
     }
@@ -23,8 +24,26 @@ class CDetailListe {
         return (ListeProduitNom)
     }
     
+    func removeListeProduitNom_Id() {
+        ListeProduitNom_Id = [String:Int]()
+    }
+    
+    func removeListeProduitNom() {
+        ListeProduitNom = [String]()
+    }
+    
     func getListeProduitNom_Id() -> [String:Int] {
         return (ListeProduitNom_Id )
+    }
+    
+    func getListProduitNomModifié() -> [String]{
+        for (name, ID) in ModelArticle.getListeDeCourseModifié()
+        {
+            ListeProduitNom.append(name)
+            ListeProduitNom_Id[name] = ID
+        }
+        ModelArticle.RemoveListeDeCourseModifié()
+        return (ListeProduitNom)
     }
     
     func RequestProduct(Product: String){

@@ -621,7 +621,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1493" y="1368"/>
+            <point key="canvasLocation" x="1492.753623188406" y="1367.9347826086957"/>
         </scene>
         <!--Product2-->
         <scene sceneID="k5v-oA-CZj">
@@ -816,7 +816,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2355-leroy-merlin-20080702-img1" translatesAutoresizingMaskIntoConstraints="NO" id="au3-gd-pWe">
-                                <rect key="frame" x="0.0" y="64" width="414" height="187"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="WNd-5Q-3vR">
@@ -885,7 +885,7 @@
                                     <segue destination="Ehk-08-n4m" kind="show" id="hOf-oc-tm5"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="search24pts" id="ZiD-Px-fVh">
+                            <barButtonItem systemItem="search" id="ZiD-Px-fVh">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="Euq-dP-Lm9" kind="push" id="JY4-aK-BgB"/>
@@ -1308,14 +1308,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="lkf-5R-lNL" style="IBUITableViewCellStyleDefault" id="YQI-Sf-qT9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="a3C-dU-fXq" style="IBUITableViewCellStyleDefault" id="YQI-Sf-qT9">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YQI-Sf-qT9" id="2Vh-Bf-ogp">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lkf-5R-lNL">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3C-dU-fXq">
                                             <rect key="frame" x="15" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -1324,6 +1324,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.11764705882352941" green="0.35686274509803922" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="VProduct"/>
                                 <connections>
                                     <segue destination="Rfr-tI-80Z" kind="show" identifier="VProd2" id="WSw-7x-A7X"/>
@@ -1335,23 +1336,25 @@
                             <outlet property="delegate" destination="jiE-ou-BLr" id="lg8-y8-lhE"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="wXT-6Z-eEv">
                         <rightBarButtonItems>
-                            <barButtonItem title="Démarer" id="JFp-DF-JTD">
+                            <barButtonItem systemItem="play" id="OeL-3K-REg"/>
+                            <barButtonItem systemItem="add" id="GJf-xE-mk5">
                                 <connections>
-                                    <action selector="ONclickTest:" destination="jiE-ou-BLr" id="bM3-W1-utU"/>
+                                    <action selector="BtnAdd_OnClick:" destination="jiE-ou-BLr" id="zuW-fh-vtf"/>
+                                    <segue destination="Euq-dP-Lm9" kind="show" identifier="ModificationListe" id="jwn-hf-6LQ"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Sauvegarder" id="xkT-SF-nKk">
+                            <barButtonItem systemItem="trash" id="p1d-LG-oqh">
                                 <connections>
-                                    <action selector="BtnSave_Click:" destination="jiE-ou-BLr" id="lFj-fi-God"/>
+                                    <action selector="BtnErrease_OnClick:" destination="jiE-ou-BLr" id="evW-no-ibq"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Effacer" id="7OP-c4-xSB"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="BtnSaveList" destination="xkT-SF-nKk" id="uFR-ni-pSR"/>
                         <outlet property="searchDisplayController" destination="BFa-VE-k9d" id="Arv-u1-0MU"/>
                     </connections>
                 </tableViewController>
@@ -1365,7 +1368,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="586" y="2190"/>
+            <point key="canvasLocation" x="585.50724637681162" y="2189.6739130434785"/>
         </scene>
     </scenes>
     <resources>
@@ -1379,11 +1382,11 @@
         <image name="menu" width="25" height="25"/>
         <image name="menu-button" width="32" height="32"/>
         <image name="scanning-barcode" width="64" height="64"/>
-        <image name="search24pts" width="24" height="24"/>
         <image name="user" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mi0-1d-LLa"/>
+        <segue reference="jwn-hf-6LQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.00046688408469999998" green="0.37297207119999998" blue="0.39074826239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -18,6 +18,7 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
         product = RequestProduct(Product: "")
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
@@ -25,8 +26,7 @@ class ProductTableViewController: UITableViewController, UISearchResultsUpdating
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
-
-    }
+        }
     
     func updateSearchResults(for searchController: UISearchController) {
         /*var Text = searchController.searchBar.text
