@@ -16,6 +16,7 @@ class VContact: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var surnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var messageField: UITextField!
+    @IBOutlet weak var BugReport: UIButton!
 
     
     

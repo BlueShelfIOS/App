@@ -665,6 +665,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXx-RX-vdm">
+                                <rect key="frame" x="147" y="580" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reporter un bug">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OcL-6M-XIm" kind="show" id="xHV-VQ-Ydz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.093128450210000005" green="0.30498209599999998" blue="0.62495881320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -673,6 +683,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Btn_OpenMenu" destination="Qai-lJ-Ycb" id="4iT-gg-mSF"/>
+                        <outlet property="BugReport" destination="VXx-RX-vdm" id="suf-I4-cEQ"/>
                         <outlet property="emailField" destination="q9T-TW-yfK" id="pCS-Gy-Bn8"/>
                         <outlet property="messageField" destination="DVn-6L-jci" id="32P-jT-2i7"/>
                         <outlet property="nameField" destination="aOL-Rm-9Q5" id="k3h-v5-cCx"/>
@@ -682,6 +693,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4i-NH-2S1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5766.666666666667" y="573.91304347826087"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9NI-C8-ck9">
+            <objects>
+                <navigationController id="OcL-6M-XIm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NQz-6A-IyF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="waF-dK-lem" kind="relationship" relationship="rootViewController" id="dof-vb-lEU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwk-6R-ciA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5767" y="1348"/>
+        </scene>
+        <!--Bug Report-->
+        <scene sceneID="Q3s-8y-Tsa">
+            <objects>
+                <viewController storyboardIdentifier="VBugReport" useStoryboardIdentifierAsRestorationIdentifier="YES" id="waF-dK-lem" customClass="VBugReport" customModule="ApplicationBlueshelfIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IYE-rW-Q07"/>
+                        <viewControllerLayoutGuide type="bottom" id="bwS-mq-8ve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PeT-OG-pRw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description du problème" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1E7-Dl-GT1">
+                                <rect key="frame" x="49" y="433" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="DismissKeyboard:" destination="waF-dK-lem" eventType="editingDidEndOnExit" id="Mfv-bU-h9Q"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28j-HN-0L0">
+                                <rect key="frame" x="178" y="510" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Envoyer"/>
+                                <connections>
+                                    <action selector="Send:" destination="waF-dK-lem" eventType="touchUpInside" id="cTV-1m-AaE"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpt-NM-DZj">
+                                <rect key="frame" x="0.0" y="222" width="414" height="146"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.093128450210000005" green="0.30498209599999998" blue="0.62495881320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xO4-O0-nAV">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Pk9-hg-hNW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Btn_OpenMenu" destination="Pk9-hg-hNW" id="OLQ-Bo-3n3"/>
+                        <outlet property="Btn_Send" destination="28j-HN-0L0" id="yEZ-qe-r8w"/>
+                        <outlet property="Picker_ViewSelection" destination="rpt-NM-DZj" id="2Iu-eO-167"/>
+                        <outlet property="TF_Description" destination="1E7-Dl-GT1" id="0Hn-dc-CzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nvr-XN-Eeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5766.666666666667" y="2124.4565217391305"/>
         </scene>
         <!--Settings-->
         <scene sceneID="QTt-8E-mzB">

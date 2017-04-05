@@ -31,6 +31,7 @@
 		C272C51F1E65CB11005D3816 /* VProdcutsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272C51E1E65CB10005D3816 /* VProdcutsList.swift */; };
 		C282702C1DDB44BC00DE0D4E /* VUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702B1DDB44BC00DE0D4E /* VUser.swift */; };
 		C282702E1DDB44D800DE0D4E /* CUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282702D1DDB44D800DE0D4E /* CUser.swift */; };
+		C2ACFE781E95265F00AB5ED7 /* VBugReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ACFE771E95265F00AB5ED7 /* VBugReport.swift */; };
 		C2C503AB1DE732B700604D71 /* VAccueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AA1DE732B700604D71 /* VAccueil.swift */; };
 		C2C503AD1DE73C6800604D71 /* VFindShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AC1DE73C6800604D71 /* VFindShop.swift */; };
 		C2C503AF1DE73CBD00604D71 /* VProductTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C503AE1DE73CBD00604D71 /* VProductTree.swift */; };
@@ -78,6 +79,7 @@
 		C272C51E1E65CB10005D3816 /* VProdcutsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProdcutsList.swift; sourceTree = "<group>"; };
 		C282702B1DDB44BC00DE0D4E /* VUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VUser.swift; sourceTree = "<group>"; };
 		C282702D1DDB44D800DE0D4E /* CUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUser.swift; sourceTree = "<group>"; };
+		C2ACFE771E95265F00AB5ED7 /* VBugReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBugReport.swift; sourceTree = "<group>"; };
 		C2C503AA1DE732B700604D71 /* VAccueil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAccueil.swift; sourceTree = "<group>"; };
 		C2C503AC1DE73C6800604D71 /* VFindShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFindShop.swift; sourceTree = "<group>"; };
 		C2C503AE1DE73CBD00604D71 /* VProductTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProductTree.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				67F9B3831DEDB2B200604FE7 /* ProductTableViewController.swift */,
 				673C11501DEF0E7D00DFDD1D /* VProduct.swift */,
 				C26F95D91DF6D4FB00B0BF55 /* CategoryCell.swift */,
+				C2ACFE771E95265F00AB5ED7 /* VBugReport.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */,
 				673C11511DEF0E7D00DFDD1D /* VProduct.swift in Sources */,
 				C2C503C31DE740FA00604D71 /* CProductTree.swift in Sources */,
+				C2ACFE781E95265F00AB5ED7 /* VBugReport.swift in Sources */,
 				671954841DCC96040082D9AD /* VHome.swift in Sources */,
 				C2C503CD1DE7413D00604D71 /* CTutorial.swift in Sources */,
 				C26F95D81DF6BF7000B0BF55 /* Product.swift in Sources */,
