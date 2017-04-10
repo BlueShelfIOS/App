@@ -21,15 +21,11 @@ class VRegister: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
    
     @IBAction func TxtPassword1_OnClick(_ sender: Any) {
         self.TxtfPassword1.isSecureTextEntry = true
@@ -39,49 +35,89 @@ class VRegister: UIViewController {
         self.TxtfPassword2.isSecureTextEntry = true
     }
     
+    func checkTxtInput() -> Int {
+        if (self.TxtfName.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_CHAMP_NOM_VIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        if (self.TxtfSurname.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_CHAMP_PRENOM_VIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        if (self.TxtfEmail.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_CHAMP_EMAIL_VIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        if (ControllerRegister.VerifyEmail(Email: self.TxtfEmail.text!) == true)
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_EMAIL_INVALIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        if (self.TxtfPassword1.text == "" || self.TxtfPassword2.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_CHAMP_PASSWORD_VIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        if (self.TxtfPassword1.text != self.TxtfPassword2.text) {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_PASSWORD_DIFFERENT , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return 0
+        }
+        return 1
+    }
+    
     @IBAction func BtnValidate_OnClick(_ sender: Any) {
         
-        let name = self.TxtfName.text
-        let surname = self.TxtfSurname.text
-        let email = self.TxtfEmail.text
-        let password1 = self.TxtfPassword1.text
-        let password2 = self.TxtfPassword2.text
-        if (ControllerRegister.VerifyInputFields(FirstName: name!, LastName: surname!, Email: email!, Password1: password1!, Password2: password2!) == false ){
-            let alert = UIAlertController(title: "Erreur", message: "Veuillez remplir tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        
+        if (checkTxtInput() == 0){
+            return
+        }
+        let returnCode = ControllerRegister.RequestPostRegister(FirstName: self.TxtfName.text!, LastName: self.TxtfSurname.text!, Password: self.TxtfPassword1.text!, Email: self.TxtfEmail.text!)
+        if (returnCode == CODE_RETOUR_201)
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_CONFIRMATION, message: MSG_CONFIRMATION_CREATION_COMPTE, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in RemoveInput()}))
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        if (returnCode == CODE_RETOUR_200)
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_COMPTE_DEJA_EXISTANT, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
-        if (ControllerRegister.VerifyEmail(Email: self.TxtfEmail.text!) == false){
-            let alert = UIAlertController(title: "Erreur", message: "Adresse mail incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-        if (ControllerRegister.VerifySamePassword(Password1: self.TxtfPassword1.text!, Password2: self.TxtfPassword2.text!) == false){
-            let alert = UIAlertController(title: "Erreur", message: "Les deux mots sont de passe ne sont pas identiques, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-        let resul = ControllerRegister.RequestPostRegister(FirstName: name!, LastName: surname!, Password: password1!, Email: email!)
-        if resul == 201
+        if (returnCode == CODE_RETOUR_ERREUR_CONNECTION)
         {
-            let alert = UIAlertController(title: "Erreur", message: "Votre compte a bien été créer.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        if resul == 400
-        {
-            self.LblError.text = "error"
-        }
-        if resul == -1
-        {
-            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, Veuillez réesayer ultérieurement.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CONNEXION, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
 
+        func RemoveInput()
+        {
+            self.TxtfName.text = ""
+            self.TxtfSurname.text = ""
+            self.TxtfEmail.text = ""
+            self.TxtfPassword1.text = ""
+            self.TxtfPassword2.text = ""
+            
+        }
     }
 }
 

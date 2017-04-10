@@ -141,9 +141,10 @@
 				67393D871E91EA93001D635D /* Home */,
 				67393D881E91EB6C001D635D /* Connection */,
 				67393D891E91EEAA001D635D /* ForgotPassword */,
-				6719548D1DCC96040082D9AD /* Info.plist */,
+				674710A51E9AFBF200E85FD8 /* Register */,
 				671954881DCC96040082D9AD /* Assets.xcassets */,
 				671954811DCC96040082D9AD /* AppDelegate.swift */,
+				6719548D1DCC96040082D9AD /* Info.plist */,
 			);
 			path = ApplicationBlueshelfIOS;
 			sourceTree = "<group>";
@@ -204,10 +205,18 @@
 			name = ForgotPassword;
 			sourceTree = "<group>";
 		};
-		C2C503CE1DE7419700604D71 /* View */ = {
+		674710A51E9AFBF200E85FD8 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				671954991DCD26240082D9AD /* VRegister.swift */,
+				6719549B1DCD26380082D9AD /* CRegister.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		C2C503CE1DE7419700604D71 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				C282702B1DDB44BC00DE0D4E /* VUser.swift */,
 				C24B022A1DE6FA89005AACE0 /* VScannerReading.swift */,
 				C2C503AC1DE73C6800604D71 /* VFindShop.swift */,
@@ -234,7 +243,6 @@
 				C2C503C81DE7412B00604D71 /* CContact.swift */,
 				C2C503CA1DE7413400604D71 /* CSettings.swift */,
 				C2C503CC1DE7413D00604D71 /* CTutorial.swift */,
-				6719549B1DCD26380082D9AD /* CRegister.swift */,
 				C282702D1DDB44D800DE0D4E /* CUser.swift */,
 				C205DCCF1DE304C800308147 /* CScannerReading.swift */,
 				673C11521DEF0F1F00DFDD1D /* CProduct.swift */,

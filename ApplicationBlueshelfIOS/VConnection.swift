@@ -22,51 +22,52 @@ class VConnection: UIViewController {
     
      override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func TxtfPassword(_ sender: Any) {
         self.TxtfPassword.isSecureTextEntry = true
     }
 
-    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
-        
-        // create the alert
-        let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-
+    
     @IBAction func BtnValidate_OnClick(_ sender: Any) {
+        if (self.TxtfUser.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CHAMP_EMAIL_VIDE , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            return
+        }
+        if (self.TxtfPassword.text == "")
+        {
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CHAMP_PASSWORD_VIDE, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            return
+        }
         let UserName = self.TxtfUser.text
         let  Password =  self.TxtfPassword.text
         let resul = Connection.RequestPostConnection(Username: UserName! , PassWord: Password!)
-        if resul == 201
+        if (resul == CODE_RETOUR_201)
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewDisplayer")
             self.present(vc, animated: true, completion: nil)
+            return
         }
-        if resul == 400
+        else if (resul == CODE_RETOUR_400)
         {
-            let alert = UIAlertController(title: "Erreur", message: "Adresse mail ou mot de passe incorect, Veuillez réesayer.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        if resul == -1
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_400, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            return
+                     }
+        else if (resul == CODE_RETOUR_ERREUR_CONNECTION)
         {
-            let alert = UIAlertController(title: "Erreur", message: "Une erreur est survenue, Veuillez réesayer ultérieurement.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CONNEXION, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            return
         }
 
     }

@@ -11,15 +11,6 @@ import Foundation
 class CRegister {
     
     
-    func VerifySamePassword(Password1: String, Password2: String) -> Bool
-    {
-        if (Password1 == Password2)
-        {
-            return (true)
-        }
-        return (false)
-    }
-    
     func VerifyEmail(Email: String) -> Bool
     {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -27,47 +18,31 @@ class CRegister {
         return emailTest.evaluate(with: Email)
     }
     
-    func VerifyInputFields(FirstName: String, LastName: String, Email: String, Password1: String, Password2: String) -> Bool
-    {
-        if (FirstName.isEmpty || LastName.isEmpty || Email.isEmpty || Password1.isEmpty || Password2.isEmpty) {
-            return false
-        }
-        return (true)
-    }
- 
+    
     func RequestPostRegister(FirstName: String, LastName: String, Password: String, Email: String) -> Int {
+        var returnCode = Int()
         var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/users")!)
         request.httpMethod = "POST"
-        let postString = "firstName=" + FirstName + "&lastName=" + LastName + "&email=" + Email + "&password=" + Password
+        let postString = "_format=json&firstName=" + FirstName + "&lastName=" + LastName + "&email=" + Email + "&password=" + Password
         request.httpBody = postString.data(using: .utf8)
-        var ReturnCode = 0
-        let semaphore = DispatchSemaphore(value: 0);
-        let task = URLSession.shared.dataTask(with: request)
-        {
-            data, response, error in
-            guard let data = data, error == nil else
-            {
-                ReturnCode = -1
-                semaphore.signal()
-                return // Error Connection
+        let semaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let _ = data, error == nil else {
+                returnCode = CODE_RETOUR_ERREUR_CONNECTION
+                return
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 201 {
-                ReturnCode = 201
-                let responseString = String(data: data, encoding: .utf8) // token
-                print("responseString = \(responseString)")
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == CODE_RETOUR_201 {
+                returnCode = CODE_RETOUR_201
                 semaphore.signal()
             }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 400 {
-                ReturnCode = 400
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == CODE_RETOUR_200 {
+                returnCode = CODE_RETOUR_200
                 semaphore.signal()
             }
         }
-        
-        print(ReturnCode)
-        semaphore.signal()
         task.resume()
         semaphore.wait()
-        return ReturnCode
+        return returnCode
     }
 
     
