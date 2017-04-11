@@ -113,7 +113,6 @@ class CDetailList {
         let semaphore = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let _ = data, error == nil else {
-                print("error=\(error)")
                 self.Retour = -1
                 return
             }
@@ -130,6 +129,7 @@ class CDetailList {
             }
             }
         task.resume()
+        semaphore.wait()
     }
     
     

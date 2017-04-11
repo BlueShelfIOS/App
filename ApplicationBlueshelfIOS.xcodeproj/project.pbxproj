@@ -26,6 +26,7 @@
 		67D612F11E9BC23700E6FA50 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F01E9BC23700E6FA50 /* VHome.swift */; };
 		67D612F31E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F21E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift */; };
 		67D612F51E9BF34300E6FA50 /* VSideMenuRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F41E9BF34300E6FA50 /* VSideMenuRight.swift */; };
+		67D612F71E9C84B100E6FA50 /* CSideMenuRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F61E9C84B100E6FA50 /* CSideMenuRight.swift */; };
 		67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240B61E5FBDA100A8506D /* ListArticle.swift */; };
 		67F240BB1E5FC5DF00A8506D /* VDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BA1E5FC5DF00A8506D /* VDetailList.swift */; };
 		67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BC1E5FC5FA00A8506D /* CDetailList.swift */; };
@@ -56,6 +57,7 @@
 		67D612F01E9BC23700E6FA50 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		67D612F21E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSideMenuLeftTableViewController.swift; sourceTree = "<group>"; };
 		67D612F41E9BF34300E6FA50 /* VSideMenuRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSideMenuRight.swift; sourceTree = "<group>"; };
+		67D612F61E9C84B100E6FA50 /* CSideMenuRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSideMenuRight.swift; sourceTree = "<group>"; };
 		67F240B61E5FBDA100A8506D /* ListArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListArticle.swift; sourceTree = "<group>"; };
 		67F240BA1E5FC5DF00A8506D /* VDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDetailList.swift; sourceTree = "<group>"; };
 		67F240BC1E5FC5FA00A8506D /* CDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDetailList.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				67D612F01E9BC23700E6FA50 /* VHome.swift */,
 				67D612F21E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift */,
 				67D612F41E9BF34300E6FA50 /* VSideMenuRight.swift */,
+				67D612F61E9C84B100E6FA50 /* CSideMenuRight.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				67F240C31E60C83900A8506D /* VProduct2.swift in Sources */,
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CConnection.swift in Sources */,
+				67D612F71E9C84B100E6FA50 /* CSideMenuRight.swift in Sources */,
 				67D612F11E9BC23700E6FA50 /* VHome.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
 				67393D831E8B410F001D635D /* CChooseList.swift in Sources */,

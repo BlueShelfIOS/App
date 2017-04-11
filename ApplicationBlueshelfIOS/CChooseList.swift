@@ -65,7 +65,7 @@ class CChooseList {
             let NameListe = "Liste " + date
             
             let endIndex = NameListe.index(NameListe.endIndex, offsetBy: -5)
-            var truncated = NameListe.substring(to: endIndex)
+            let truncated = NameListe.substring(to: endIndex)
             
             ListeDeCourseNom.append(truncated )
             ListeDeCourseNom_Id[truncated] = ModelArticle.getListeProduit()

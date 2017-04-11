@@ -22,6 +22,30 @@ class VConnection: UIViewController {
     
      override func viewDidLoad() {
         super.viewDidLoad()
+        TxtfUser.layer.borderColor = UIColor.white.cgColor
+        TxtfPassword.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    
+    
+    
+    
+    @IBAction func TextFieldEmailBegin(_ sender: UITextField) {
+        TxtfUser.placeholder = ""
+    }
+    @IBAction func TextFieldNameEnd(_ sender: UITextField) {
+        if (TxtfUser.text == ""){
+        TxtfUser.placeholder = "Email"
+        }
+    }
+    
+    @IBAction func TextFieldPasswordBegin(_ sender: UITextField) {
+        TxtfPassword.placeholder = ""
+    }
+    @IBAction func TextFieldPasswordEnd(_ sender: UITextField) {
+        if (TxtfPassword.text == "") {
+            TxtfPassword.placeholder = "Mot de passe"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,12 +62,14 @@ class VConnection: UIViewController {
         {
             let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CHAMP_EMAIL_VIDE , preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
         }
         if (self.TxtfPassword.text == "")
         {
             let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_CHAMP_PASSWORD_VIDE, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
         }
         let UserName = self.TxtfUser.text
@@ -60,6 +86,7 @@ class VConnection: UIViewController {
         {
             let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_ERREUR_400, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
                      }
         else if (resul == CODE_RETOUR_ERREUR_CONNECTION)
@@ -84,6 +111,7 @@ class VConnection: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
     
 }
 
