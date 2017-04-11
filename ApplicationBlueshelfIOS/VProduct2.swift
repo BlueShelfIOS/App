@@ -17,7 +17,7 @@ class VProduct2: UIViewController {
     @IBOutlet weak var BtnDeleteArticle: UIButton!
     
     
-     var passedValue:String = "";
+    var passedValue:String = "";
     var ProductController = CProduct()
     override func viewDidLoad() {
         super.viewDidLoad()

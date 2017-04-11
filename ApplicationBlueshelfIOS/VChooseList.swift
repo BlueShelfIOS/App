@@ -10,6 +10,8 @@ import UIKit
 
 class VChooseList: UITableViewController, UISearchResultsUpdating {
     
+    @IBOutlet weak var ItemProfile: UIBarButtonItem!
+    @IBOutlet weak var ItemMenu: UIBarButtonItem!
     var ListDeCourseNom_Id = [String:String]();
     var ListDeCourseNom = [String]();
     var filteredProduct = [String]()
@@ -22,8 +24,8 @@ class VChooseList: UITableViewController, UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         CListe.RequestGetList()
-        self.navigationController?.navigationBar.tintColor = UIColor.white;
         ListDeCourseNom = CListe.getListeDeCourseNom()
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
@@ -31,6 +33,7 @@ class VChooseList: UITableViewController, UISearchResultsUpdating {
         self.tableView.tableHeaderView = self.searchController.searchBar
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
+        sideMenus()
          }
     
     
@@ -44,9 +47,7 @@ class VChooseList: UITableViewController, UISearchResultsUpdating {
         }
         self.resultsController.tableView.reloadData()
     }
-    
-    
-    override func didReceiveMemoryWarning() {
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
@@ -70,7 +71,7 @@ class VChooseList: UITableViewController, UISearchResultsUpdating {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+       override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
@@ -106,4 +107,21 @@ class VChooseList: UITableViewController, UISearchResultsUpdating {
         }
         
        }
+    
+    func sideMenus()
+    {
+        if (revealViewController() != nil)
+        {
+            ItemMenu.target = revealViewController()
+            ItemMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            revealViewController().rightViewRevealWidth = 200
+            
+            ItemProfile.target = revealViewController()
+            ItemProfile.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer() )
+        }
+    }
+
 }

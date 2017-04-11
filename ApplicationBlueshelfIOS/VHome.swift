@@ -1,38 +1,42 @@
 //
-//  VAccueil.swift
+//  Home3.swift
 //  ApplicationBlueshelfIOS
 //
-//  Created by Maxime Dulin on 11/24/16.
-//  Copyright © 2016 Antoine Millet. All rights reserved.
+//  Created by Antoine Millet on 10/04/2017.
+//  Copyright © 2017 Antoine Millet. All rights reserved.
 //
 
 import UIKit
 
-class VHome: UIViewController , UISearchBarDelegate{
+class VHome: UIViewController {
 
-    @IBOutlet weak var Btn_OpenMenu: UIBarButtonItem!
-    @IBOutlet weak var TopBar: UINavigationItem!
-    var Home = CHome();
-
-
+    @IBOutlet weak var ItemProfile: UIBarButtonItem!
+    @IBOutlet weak var ItemMenu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = Home.hexStringToUIColor(hex: "#025F64")
-        Btn_OpenMenu.target = self.revealViewController()
-        Btn_OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-          }
+        sideMenus()
+        // Do any additional setup after loading the view.
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Oh yeah")
+    func sideMenus()
+    {
+        if (revealViewController() != nil)
+        {
+            ItemMenu.target = revealViewController()
+            ItemMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            revealViewController().rightViewRevealWidth = 200
+            
+            ItemProfile.target = revealViewController()
+            ItemProfile.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer() )
+        }
     }
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Oh yeah2")
-    }*/
-   }
+}
