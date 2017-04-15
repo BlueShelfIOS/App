@@ -27,6 +27,14 @@
 		67D612F31E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F21E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift */; };
 		67D612F51E9BF34300E6FA50 /* VSideMenuRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F41E9BF34300E6FA50 /* VSideMenuRight.swift */; };
 		67D612F71E9C84B100E6FA50 /* CSideMenuRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D612F61E9C84B100E6FA50 /* CSideMenuRight.swift */; };
+		67DC750B1E9D2E1D000C8874 /* VChooseMagasin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC750A1E9D2E1D000C8874 /* VChooseMagasin.swift */; };
+		67DC750D1E9D2E2A000C8874 /* CChooseMagasin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC750C1E9D2E2A000C8874 /* CChooseMagasin.swift */; };
+		67DC75101E9D81ED000C8874 /* VShowMagasinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC750F1E9D81ED000C8874 /* VShowMagasinViewController.swift */; };
+		67DC75121E9D81FC000C8874 /* CShowMagasin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75111E9D81FC000C8874 /* CShowMagasin.swift */; };
+		67DC75151E9EC6CB000C8874 /* VInformationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75141E9EC6CB000C8874 /* VInformationUser.swift */; };
+		67DC75171E9EC6DC000C8874 /* CInformationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75161E9EC6DC000C8874 /* CInformationUser.swift */; };
+		67DC751A1E9FE5D7000C8874 /* VModifyPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75191E9FE5D7000C8874 /* VModifyPassword.swift */; };
+		67DC751C1E9FE5E5000C8874 /* CModifyPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC751B1E9FE5E5000C8874 /* CModifyPassword.swift */; };
 		67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240B61E5FBDA100A8506D /* ListArticle.swift */; };
 		67F240BB1E5FC5DF00A8506D /* VDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BA1E5FC5DF00A8506D /* VDetailList.swift */; };
 		67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BC1E5FC5FA00A8506D /* CDetailList.swift */; };
@@ -58,6 +66,14 @@
 		67D612F21E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSideMenuLeftTableViewController.swift; sourceTree = "<group>"; };
 		67D612F41E9BF34300E6FA50 /* VSideMenuRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSideMenuRight.swift; sourceTree = "<group>"; };
 		67D612F61E9C84B100E6FA50 /* CSideMenuRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSideMenuRight.swift; sourceTree = "<group>"; };
+		67DC750A1E9D2E1D000C8874 /* VChooseMagasin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VChooseMagasin.swift; sourceTree = "<group>"; };
+		67DC750C1E9D2E2A000C8874 /* CChooseMagasin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CChooseMagasin.swift; sourceTree = "<group>"; };
+		67DC750F1E9D81ED000C8874 /* VShowMagasinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShowMagasinViewController.swift; sourceTree = "<group>"; };
+		67DC75111E9D81FC000C8874 /* CShowMagasin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowMagasin.swift; sourceTree = "<group>"; };
+		67DC75141E9EC6CB000C8874 /* VInformationUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VInformationUser.swift; sourceTree = "<group>"; };
+		67DC75161E9EC6DC000C8874 /* CInformationUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CInformationUser.swift; sourceTree = "<group>"; };
+		67DC75191E9FE5D7000C8874 /* VModifyPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VModifyPassword.swift; sourceTree = "<group>"; };
+		67DC751B1E9FE5E5000C8874 /* CModifyPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CModifyPassword.swift; sourceTree = "<group>"; };
 		67F240B61E5FBDA100A8506D /* ListArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListArticle.swift; sourceTree = "<group>"; };
 		67F240BA1E5FC5DF00A8506D /* VDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDetailList.swift; sourceTree = "<group>"; };
 		67F240BC1E5FC5FA00A8506D /* CDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDetailList.swift; sourceTree = "<group>"; };
@@ -105,14 +121,18 @@
 				C2C503CF1DE741A300604D71 /* Controler */,
 				C2C503CE1DE7419700604D71 /* View */,
 				67393D861E91E796001D635D /* DetailList */,
-				67393D851E91E750001D635D /* ChooseList */,
+				67393D851E91E750001D635D /* Choix Liste */,
 				67393D871E91EA93001D635D /* Home */,
 				67393D881E91EB6C001D635D /* Connection */,
-				67393D891E91EEAA001D635D /* ForgotPassword */,
-				674710A51E9AFBF200E85FD8 /* Register */,
-				671954881DCC96040082D9AD /* Assets.xcassets */,
+				67393D891E91EEAA001D635D /* Mot de passe oublié */,
+				674710A51E9AFBF200E85FD8 /* Inscription */,
+				67DC75091E9D2DF6000C8874 /* Choix magasin */,
+				67DC750E1E9D81C6000C8874 /* Affichage magasin */,
+				67DC75131E9EC6AB000C8874 /* Information utilisateur */,
+				67DC75181E9FDABB000C8874 /* Modifier mot de passe */,
 				671954811DCC96040082D9AD /* AppDelegate.swift */,
 				6719548D1DCC96040082D9AD /* Info.plist */,
+				671954881DCC96040082D9AD /* Assets.xcassets */,
 			);
 			path = ApplicationBlueshelfIOS;
 			sourceTree = "<group>";
@@ -128,13 +148,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		67393D851E91E750001D635D /* ChooseList */ = {
+		67393D851E91E750001D635D /* Choix Liste */ = {
 			isa = PBXGroup;
 			children = (
 				674D5EDC1E6DA70D0070979E /* VChooseList.swift */,
 				67393D821E8B410F001D635D /* CChooseList.swift */,
 			);
-			name = ChooseList;
+			name = "Choix Liste";
 			sourceTree = "<group>";
 		};
 		67393D861E91E796001D635D /* DetailList */ = {
@@ -166,22 +186,58 @@
 			name = Connection;
 			sourceTree = "<group>";
 		};
-		67393D891E91EEAA001D635D /* ForgotPassword */ = {
+		67393D891E91EEAA001D635D /* Mot de passe oublié */ = {
 			isa = PBXGroup;
 			children = (
 				67A385381DDCADD6001A7FDE /* VForgottenPassword.swift */,
 				67A3853A1DDCADE4001A7FDE /* CForgottenPassword.swift */,
 			);
-			name = ForgotPassword;
+			name = "Mot de passe oublié";
 			sourceTree = "<group>";
 		};
-		674710A51E9AFBF200E85FD8 /* Register */ = {
+		674710A51E9AFBF200E85FD8 /* Inscription */ = {
 			isa = PBXGroup;
 			children = (
 				671954991DCD26240082D9AD /* VRegister.swift */,
 				6719549B1DCD26380082D9AD /* CRegister.swift */,
 			);
-			name = Register;
+			name = Inscription;
+			sourceTree = "<group>";
+		};
+		67DC75091E9D2DF6000C8874 /* Choix magasin */ = {
+			isa = PBXGroup;
+			children = (
+				67DC750A1E9D2E1D000C8874 /* VChooseMagasin.swift */,
+				67DC750C1E9D2E2A000C8874 /* CChooseMagasin.swift */,
+			);
+			name = "Choix magasin";
+			sourceTree = "<group>";
+		};
+		67DC750E1E9D81C6000C8874 /* Affichage magasin */ = {
+			isa = PBXGroup;
+			children = (
+				67DC750F1E9D81ED000C8874 /* VShowMagasinViewController.swift */,
+				67DC75111E9D81FC000C8874 /* CShowMagasin.swift */,
+			);
+			name = "Affichage magasin";
+			sourceTree = "<group>";
+		};
+		67DC75131E9EC6AB000C8874 /* Information utilisateur */ = {
+			isa = PBXGroup;
+			children = (
+				67DC75141E9EC6CB000C8874 /* VInformationUser.swift */,
+				67DC75161E9EC6DC000C8874 /* CInformationUser.swift */,
+			);
+			name = "Information utilisateur";
+			sourceTree = "<group>";
+		};
+		67DC75181E9FDABB000C8874 /* Modifier mot de passe */ = {
+			isa = PBXGroup;
+			children = (
+				67DC75191E9FE5D7000C8874 /* VModifyPassword.swift */,
+				67DC751B1E9FE5E5000C8874 /* CModifyPassword.swift */,
+			);
+			name = "Modifier mot de passe";
 			sourceTree = "<group>";
 		};
 		C2C503CE1DE7419700604D71 /* View */ = {
@@ -287,8 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */,
+				67DC75121E9D81FC000C8874 /* CShowMagasin.swift in Sources */,
 				67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */,
+				67DC751C1E9FE5E5000C8874 /* CModifyPassword.swift in Sources */,
 				673C11511DEF0E7D00DFDD1D /* VProduct.swift in Sources */,
+				67DC75171E9EC6DC000C8874 /* CInformationUser.swift in Sources */,
 				67D612F51E9BF34300E6FA50 /* VSideMenuRight.swift in Sources */,
 				67B168171E39195500025AAA /* setting.swift in Sources */,
 				67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */,
@@ -301,13 +360,18 @@
 				673C11531DEF0F1F00DFDD1D /* CProduct.swift in Sources */,
 				67F240C31E60C83900A8506D /* VProduct2.swift in Sources */,
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
+				67DC751A1E9FE5D7000C8874 /* VModifyPassword.swift in Sources */,
+				67DC75151E9EC6CB000C8874 /* VInformationUser.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CConnection.swift in Sources */,
+				67DC75101E9D81ED000C8874 /* VShowMagasinViewController.swift in Sources */,
+				67DC750D1E9D2E2A000C8874 /* CChooseMagasin.swift in Sources */,
 				67D612F71E9C84B100E6FA50 /* CSideMenuRight.swift in Sources */,
 				67D612F11E9BC23700E6FA50 /* VHome.swift in Sources */,
 				671954821DCC96040082D9AD /* AppDelegate.swift in Sources */,
 				67393D831E8B410F001D635D /* CChooseList.swift in Sources */,
 				6720EAB01DDC7046003CD432 /* Model.swift in Sources */,
 				67F240BB1E5FC5DF00A8506D /* VDetailList.swift in Sources */,
+				67DC750B1E9D2E1D000C8874 /* VChooseMagasin.swift in Sources */,
 				67D612F31E9BF33100E6FA50 /* VSideMenuLeftTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

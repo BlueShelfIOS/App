@@ -51,15 +51,20 @@ class CConnection {
                 ModelData.setToken(Token: token)
             }
             if let nestedDictionary = dictionary["user"] as? [String: Any] {
-                let firstname:String?
-                let lastname:String?
-                let email:String?
-                firstname = nestedDictionary["firstName"]  as? String
-                lastname = nestedDictionary["lastName"] as? String
-                email = nestedDictionary["email"] as? String
-                ModelData.setFirstName(Firstname: firstname!)
-                ModelData.setLastName(Lastname: lastname!)
-                ModelData.setEmail(Email: email!)
+                ModelData.setFirstName(Firstname: (nestedDictionary["firstName"]  as? String!)!)
+                ModelData.setLastName(Lastname: (nestedDictionary["lastName"] as? String!)!)
+                ModelData.setEmail(Email: (nestedDictionary["email"] as? String!)!)
+                //ModelData.setPassword(Password: (nestedDictionary["password"] as? String!)!)
+                if let nestedDictionary2 = nestedDictionary["shop"] as? [String: Any] {
+                    ModelData.setIdShop(id: String(describing: (nestedDictionary2["id"] as? Int!)))
+                    let test = nestedDictionary2["name"] as? String
+                    if (test?.isEmpty)! {
+                    ModelData.setNameMagasin(Name: "")
+                }
+                    else {
+                    ModelData.setNameMagasin(Name: test!)
+                    }
+                }
             }
             
             

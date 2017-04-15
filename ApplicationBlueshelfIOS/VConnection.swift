@@ -77,6 +77,7 @@ class VConnection: UIViewController {
         let resul = Connection.RequestPostConnection(Username: UserName! , PassWord: Password!)
         if (resul == CODE_RETOUR_201)
         {
+            ModelData.setPassword(Password: TxtfPassword.text!)
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController")
             self.present(vc, animated: true, completion: nil)

@@ -18,7 +18,7 @@ class CSideMenuRight {
     
     func RequestDeleteToken()
     {
-        var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/auth-tokens")!)
+        /*var request = URLRequest(url: URL(string: "https://dev.blueshelf.fr/app_dev.php/api/auth-tokens")!)
         request.httpMethod = "DELETE"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
         let semaphore = DispatchSemaphore(value: 0)
@@ -38,7 +38,7 @@ class CSideMenuRight {
                 self.Retour = 500
             }
         }
-        task.resume()
+        task.resume()*/
 
     }
 }

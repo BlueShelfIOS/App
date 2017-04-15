@@ -1,35 +1,37 @@
 //
-//  Home3.swift
+//  VInformationUser.swift
 //  ApplicationBlueshelfIOS
 //
-//  Created by Antoine Millet on 10/04/2017.
+//  Created by Antoine Millet on 12/04/2017.
 //  Copyright © 2017 Antoine Millet. All rights reserved.
 //
 
 import UIKit
 
-class VHome: UIViewController {
+class VInformationUser: UIViewController {
 
+    @IBOutlet weak var lblMagasin: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var LblName: UILabel!
     @IBOutlet weak var ItemProfile: UIBarButtonItem!
     @IBOutlet weak var ItemMenu: UIBarButtonItem!
+    var Information = CInformationUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        Information.RequestGetInformation()
         sideMenus()
-        if (ModelData.getNameMagasin() == "")
-        {
-            let alert = UIAlertController(title: TITRE_POPUP_WARNING, message: MSG_CHOIX_MAGASIN_OBLIGATOIR, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-
-        // Do any additional setup after loading the view.
+        LblName.text = ModelData.getLastName() + " " + ModelData.getFirstName()
+        lblEmail.text = ModelData.getEmail()
+        lblMagasin.text = ModelData.getNameMagasin()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        sideMenus()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func sideMenus()
     {
         if (revealViewController() != nil)

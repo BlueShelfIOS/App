@@ -26,9 +26,12 @@ let MSG_ERREUR_PASSWORD_DIFFERENT = "Les deux mots de passes saisis sont différ
 let MSG_ERREUR_EMAIL_INVALIDE = "L'adresse mail saisi est incorecte."
 let MSG_ERREUR_COMPTE_DEJA_EXISTANT = "Ce compte existe déja."
 
+let MSG_CHOIX_MAGASIN_OBLIGATOIR = "Vous devez selectionner votre Leroy Merlin avant de pouvoir continuer sur l'application."
 let MSG_DECONNECTION = "Est vous sur de vouloir vous deconnecter ?"
 
 let MSG_CONFIRMATION_CREATION_COMPTE = "Votre compte a bien été créer."
+let MSG_CONFIRMATION_PASSWORD_MODIFIE = "Votre mot de passe a bien été modifié."
+let MSG_CONFIRMATION_CHOIX_MAGASIN = "Ce Leroy Merlin a été défini comme votre magasin Leroy Merlin"
 
 let TITRE_POPUP_ERREUR = "Erreur"
 let TITRE_POPUP_WARNING = "Attention"
@@ -37,6 +40,8 @@ let TITRE_POPUP_CONFIRMATION = "Confirmation"
 let BTN_OK = "Ok"
 let BTN_ANNULER = "Annuler"
 
+let TAILLE_MENU_DROIT = 275
+let TAILLE_MENU_GAUCHE = 200
 
 class Csetting
 {

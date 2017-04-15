@@ -15,10 +15,22 @@ class Model {
     var _Email:String?
     var _Token:String?
     var _Password:String?
+    var _idShop = String()
+    var _nameMagasin = String()
     
     
     func getFirstName() -> String {
         return(self._FirstName)!
+    }
+    
+    func getNameMagasin() -> String {
+        return(self._nameMagasin)
+    }
+
+    
+    func getIdShop() -> String
+    {
+        return(self._idShop)
     }
     
     func getLastName() -> String {
@@ -35,6 +47,13 @@ class Model {
         return(self._Password)!
     }
 
+    func setIdShop(id:String) {
+        self._idShop = id
+    }
+    
+    func setNameMagasin(Name:String) {
+        self._nameMagasin = Name
+    }
     
     func setFirstName(Firstname:String) {
         self._FirstName = Firstname

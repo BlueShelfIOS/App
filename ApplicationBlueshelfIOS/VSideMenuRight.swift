@@ -15,7 +15,7 @@ class VSideMenuRight: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,7 +29,7 @@ class VSideMenuRight: UITableViewController {
         tmp = currentCell.textLabel?.text
         if (tmp == "Se deconnecter")
         {
-            let alert = UIAlertController(title: TITRE_POPUP_ERREUR, message: MSG_DECONNECTION, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: TITRE_POPUP_CONFIRMATION, message: MSG_DECONNECTION, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in self.disconnect()}))
             alert.addAction(UIAlertAction(title: BTN_ANNULER, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
