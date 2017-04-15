@@ -35,6 +35,14 @@
 		67DC75171E9EC6DC000C8874 /* CInformationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75161E9EC6DC000C8874 /* CInformationUser.swift */; };
 		67DC751A1E9FE5D7000C8874 /* VModifyPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75191E9FE5D7000C8874 /* VModifyPassword.swift */; };
 		67DC751C1E9FE5E5000C8874 /* CModifyPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC751B1E9FE5E5000C8874 /* CModifyPassword.swift */; };
+		67DC75211EA28E7A000C8874 /* VShowCategorieParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75201EA28E7A000C8874 /* VShowCategorieParent.swift */; };
+		67DC75231EA28E8B000C8874 /* CShowCategorieParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75221EA28E8B000C8874 /* CShowCategorieParent.swift */; };
+		67DC752A1EA29358000C8874 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75281EA29358000C8874 /* CustomCell.swift */; };
+		67DC752B1EA29358000C8874 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DC75291EA29358000C8874 /* CustomCell.xib */; };
+		67DC752F1EA2AA8B000C8874 /* VShowCategorieSon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC752E1EA2AA8B000C8874 /* VShowCategorieSon.swift */; };
+		67DC75311EA2AAA0000C8874 /* CShowCategorieSon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75301EA2AAA0000C8874 /* CShowCategorieSon.swift */; };
+		67DC75341EA2CC86000C8874 /* VShowGrandSon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75331EA2CC86000C8874 /* VShowGrandSon.swift */; };
+		67DC75361EA2CC91000C8874 /* CShowGrandSon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75351EA2CC91000C8874 /* CShowGrandSon.swift */; };
 		67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240B61E5FBDA100A8506D /* ListArticle.swift */; };
 		67F240BB1E5FC5DF00A8506D /* VDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BA1E5FC5DF00A8506D /* VDetailList.swift */; };
 		67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BC1E5FC5FA00A8506D /* CDetailList.swift */; };
@@ -74,6 +82,14 @@
 		67DC75161E9EC6DC000C8874 /* CInformationUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CInformationUser.swift; sourceTree = "<group>"; };
 		67DC75191E9FE5D7000C8874 /* VModifyPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VModifyPassword.swift; sourceTree = "<group>"; };
 		67DC751B1E9FE5E5000C8874 /* CModifyPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CModifyPassword.swift; sourceTree = "<group>"; };
+		67DC75201EA28E7A000C8874 /* VShowCategorieParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShowCategorieParent.swift; sourceTree = "<group>"; };
+		67DC75221EA28E8B000C8874 /* CShowCategorieParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowCategorieParent.swift; sourceTree = "<group>"; };
+		67DC75281EA29358000C8874 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		67DC75291EA29358000C8874 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		67DC752E1EA2AA8B000C8874 /* VShowCategorieSon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShowCategorieSon.swift; sourceTree = "<group>"; };
+		67DC75301EA2AAA0000C8874 /* CShowCategorieSon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowCategorieSon.swift; sourceTree = "<group>"; };
+		67DC75331EA2CC86000C8874 /* VShowGrandSon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShowGrandSon.swift; sourceTree = "<group>"; };
+		67DC75351EA2CC91000C8874 /* CShowGrandSon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowGrandSon.swift; sourceTree = "<group>"; };
 		67F240B61E5FBDA100A8506D /* ListArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListArticle.swift; sourceTree = "<group>"; };
 		67F240BA1E5FC5DF00A8506D /* VDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDetailList.swift; sourceTree = "<group>"; };
 		67F240BC1E5FC5FA00A8506D /* CDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDetailList.swift; sourceTree = "<group>"; };
@@ -115,7 +131,10 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
+				67DC75321EA2CC16000C8874 /* Affichage catégorie sous sous parent */,
 				674D5ED91E6DA6810070979E /* Main.storyboard */,
+				67DC752D1EA2AA30000C8874 /* Affichage Catégorie Sous Parent */,
+				67DC751F1EA28E46000C8874 /* Affichage Catégorie parent */,
 				673024431E71BF96003ED090 /* Model */,
 				C2C503D01DE741D900604D71 /* Framework */,
 				C2C503CF1DE741A300604D71 /* Controler */,
@@ -240,6 +259,35 @@
 			name = "Modifier mot de passe";
 			sourceTree = "<group>";
 		};
+		67DC751F1EA28E46000C8874 /* Affichage Catégorie parent */ = {
+			isa = PBXGroup;
+			children = (
+				67DC75201EA28E7A000C8874 /* VShowCategorieParent.swift */,
+				67DC75221EA28E8B000C8874 /* CShowCategorieParent.swift */,
+				67DC75281EA29358000C8874 /* CustomCell.swift */,
+				67DC75291EA29358000C8874 /* CustomCell.xib */,
+			);
+			name = "Affichage Catégorie parent";
+			sourceTree = "<group>";
+		};
+		67DC752D1EA2AA30000C8874 /* Affichage Catégorie Sous Parent */ = {
+			isa = PBXGroup;
+			children = (
+				67DC752E1EA2AA8B000C8874 /* VShowCategorieSon.swift */,
+				67DC75301EA2AAA0000C8874 /* CShowCategorieSon.swift */,
+			);
+			name = "Affichage Catégorie Sous Parent";
+			sourceTree = "<group>";
+		};
+		67DC75321EA2CC16000C8874 /* Affichage catégorie sous sous parent */ = {
+			isa = PBXGroup;
+			children = (
+				67DC75331EA2CC86000C8874 /* VShowGrandSon.swift */,
+				67DC75351EA2CC91000C8874 /* CShowGrandSon.swift */,
+			);
+			name = "Affichage catégorie sous sous parent";
+			sourceTree = "<group>";
+		};
 		C2C503CE1DE7419700604D71 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +379,7 @@
 			files = (
 				674D5EDB1E6DA6810070979E /* Main.storyboard in Resources */,
 				6719548C1DCC96040082D9AD /* LaunchScreen.storyboard in Resources */,
+				67DC752B1EA29358000C8874 /* CustomCell.xib in Resources */,
 				671954891DCC96040082D9AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,13 +393,19 @@
 			files = (
 				C24B026D1DE7055D005AACE0 /* SWRevealViewController.m in Sources */,
 				67DC75121E9D81FC000C8874 /* CShowMagasin.swift in Sources */,
+				67DC752A1EA29358000C8874 /* CustomCell.swift in Sources */,
 				67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */,
 				67DC751C1E9FE5E5000C8874 /* CModifyPassword.swift in Sources */,
+				67DC75341EA2CC86000C8874 /* VShowGrandSon.swift in Sources */,
+				67DC75311EA2AAA0000C8874 /* CShowCategorieSon.swift in Sources */,
 				673C11511DEF0E7D00DFDD1D /* VProduct.swift in Sources */,
 				67DC75171E9EC6DC000C8874 /* CInformationUser.swift in Sources */,
+				67DC752F1EA2AA8B000C8874 /* VShowCategorieSon.swift in Sources */,
 				67D612F51E9BF34300E6FA50 /* VSideMenuRight.swift in Sources */,
 				67B168171E39195500025AAA /* setting.swift in Sources */,
 				67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */,
+				67DC75211EA28E7A000C8874 /* VShowCategorieParent.swift in Sources */,
+				67DC75231EA28E8B000C8874 /* CShowCategorieParent.swift in Sources */,
 				671954841DCC96040082D9AD /* VConnection.swift in Sources */,
 				67F9B3841DEDB2B200604FE7 /* ProductTableViewController.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
@@ -362,6 +417,7 @@
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
 				67DC751A1E9FE5D7000C8874 /* VModifyPassword.swift in Sources */,
 				67DC75151E9EC6CB000C8874 /* VInformationUser.swift in Sources */,
+				67DC75361EA2CC91000C8874 /* CShowGrandSon.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CConnection.swift in Sources */,
 				67DC75101E9D81ED000C8874 /* VShowMagasinViewController.swift in Sources */,
 				67DC750D1E9D2E2A000C8874 /* CChooseMagasin.swift in Sources */,
