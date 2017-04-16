@@ -45,6 +45,10 @@
 		67DC75361EA2CC91000C8874 /* CShowGrandSon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75351EA2CC91000C8874 /* CShowGrandSon.swift */; };
 		67DC75391EA2E1B8000C8874 /* VShowListProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC75381EA2E1B8000C8874 /* VShowListProduct.swift */; };
 		67DC753B1EA2E1CB000C8874 /* CShowListProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC753A1EA2E1CB000C8874 /* CShowListProduct.swift */; };
+		67E7C9E31EA3FF8000876D1F /* VContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7C9E21EA3FF8000876D1F /* VContact.swift */; };
+		67E7C9E51EA3FF8B00876D1F /* CContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7C9E41EA3FF8B00876D1F /* CContact.swift */; };
+		67E7C9E71EA3FFA000876D1F /* VFeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7C9E61EA3FFA000876D1F /* VFeedBack.swift */; };
+		67E7C9E91EA3FFAE00876D1F /* CFeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7C9E81EA3FFAE00876D1F /* CFeedBack.swift */; };
 		67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240B61E5FBDA100A8506D /* ListArticle.swift */; };
 		67F240BB1E5FC5DF00A8506D /* VDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BA1E5FC5DF00A8506D /* VDetailList.swift */; };
 		67F240BD1E5FC5FA00A8506D /* CDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F240BC1E5FC5FA00A8506D /* CDetailList.swift */; };
@@ -93,6 +97,10 @@
 		67DC75351EA2CC91000C8874 /* CShowGrandSon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowGrandSon.swift; sourceTree = "<group>"; };
 		67DC75381EA2E1B8000C8874 /* VShowListProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VShowListProduct.swift; sourceTree = "<group>"; };
 		67DC753A1EA2E1CB000C8874 /* CShowListProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CShowListProduct.swift; sourceTree = "<group>"; };
+		67E7C9E21EA3FF8000876D1F /* VContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VContact.swift; sourceTree = "<group>"; };
+		67E7C9E41EA3FF8B00876D1F /* CContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CContact.swift; sourceTree = "<group>"; };
+		67E7C9E61EA3FFA000876D1F /* VFeedBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFeedBack.swift; sourceTree = "<group>"; };
+		67E7C9E81EA3FFAE00876D1F /* CFeedBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFeedBack.swift; sourceTree = "<group>"; };
 		67F240B61E5FBDA100A8506D /* ListArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListArticle.swift; sourceTree = "<group>"; };
 		67F240BA1E5FC5DF00A8506D /* VDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDetailList.swift; sourceTree = "<group>"; };
 		67F240BC1E5FC5FA00A8506D /* CDetailList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDetailList.swift; sourceTree = "<group>"; };
@@ -133,6 +141,8 @@
 		671954801DCC96040082D9AD /* ApplicationBlueshelfIOS */ = {
 			isa = PBXGroup;
 			children = (
+				67E7C9E11EA3FF5B00876D1F /* Nous contacter */,
+				67E7C9E01EA3FF4100876D1F /* Donner un avis */,
 				674D5ED91E6DA6810070979E /* Main.storyboard */,
 				67DC753C1EA2EB3B000C8874 /* Produit catalogue */,
 				67DC75371EA2E190000C8874 /* AffichageListeProduit */,
@@ -310,6 +320,24 @@
 			name = "Produit catalogue";
 			sourceTree = "<group>";
 		};
+		67E7C9E01EA3FF4100876D1F /* Donner un avis */ = {
+			isa = PBXGroup;
+			children = (
+				67E7C9E61EA3FFA000876D1F /* VFeedBack.swift */,
+				67E7C9E81EA3FFAE00876D1F /* CFeedBack.swift */,
+			);
+			name = "Donner un avis";
+			sourceTree = "<group>";
+		};
+		67E7C9E11EA3FF5B00876D1F /* Nous contacter */ = {
+			isa = PBXGroup;
+			children = (
+				67E7C9E21EA3FF8000876D1F /* VContact.swift */,
+				67E7C9E41EA3FF8B00876D1F /* CContact.swift */,
+			);
+			name = "Nous contacter";
+			sourceTree = "<group>";
+		};
 		C2C503CE1DE7419700604D71 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,12 +449,14 @@
 				67DC75171E9EC6DC000C8874 /* CInformationUser.swift in Sources */,
 				67DC752F1EA2AA8B000C8874 /* VShowCategorieSon.swift in Sources */,
 				67D612F51E9BF34300E6FA50 /* VSideMenuRight.swift in Sources */,
+				67E7C9E71EA3FFA000876D1F /* VFeedBack.swift in Sources */,
 				67DC75391EA2E1B8000C8874 /* VShowListProduct.swift in Sources */,
 				67B168171E39195500025AAA /* setting.swift in Sources */,
 				67F240B71E5FBDA100A8506D /* ListArticle.swift in Sources */,
 				67DC75211EA28E7A000C8874 /* VShowCategorieParent.swift in Sources */,
 				67DC75231EA28E8B000C8874 /* CShowCategorieParent.swift in Sources */,
 				671954841DCC96040082D9AD /* VConnection.swift in Sources */,
+				67E7C9E51EA3FF8B00876D1F /* CContact.swift in Sources */,
 				67DC753B1EA2E1CB000C8874 /* CShowListProduct.swift in Sources */,
 				6719549A1DCD26240082D9AD /* VRegister.swift in Sources */,
 				6719549C1DCD26380082D9AD /* CRegister.swift in Sources */,
@@ -437,9 +467,11 @@
 				67A3853B1DDCADE4001A7FDE /* CForgottenPassword.swift in Sources */,
 				67DC751A1E9FE5D7000C8874 /* VModifyPassword.swift in Sources */,
 				67DC75151E9EC6CB000C8874 /* VInformationUser.swift in Sources */,
+				67E7C9E31EA3FF8000876D1F /* VContact.swift in Sources */,
 				67DC75361EA2CC91000C8874 /* CShowGrandSon.swift in Sources */,
 				671954981DCCF37B0082D9AD /* CConnection.swift in Sources */,
 				67DC75101E9D81ED000C8874 /* VShowMagasinViewController.swift in Sources */,
+				67E7C9E91EA3FFAE00876D1F /* CFeedBack.swift in Sources */,
 				67DC750D1E9D2E2A000C8874 /* CChooseMagasin.swift in Sources */,
 				67D612F71E9C84B100E6FA50 /* CSideMenuRight.swift in Sources */,
 				67D612F11E9BC23700E6FA50 /* VHome.swift in Sources */,

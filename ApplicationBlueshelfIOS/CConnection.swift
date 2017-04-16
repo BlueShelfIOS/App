@@ -56,7 +56,8 @@ class CConnection {
                 ModelData.setEmail(Email: (nestedDictionary["email"] as? String!)!)
                 //ModelData.setPassword(Password: (nestedDictionary["password"] as? String!)!)
                 if let nestedDictionary2 = nestedDictionary["shop"] as? [String: Any] {
-                    ModelData.setIdShop(id: String(describing: (nestedDictionary2["id"] as? Int!)))
+                    let x : Int = (nestedDictionary2["id"] as? Int)!
+                    ModelData.setIdShop(id: String(x))
                     let test = nestedDictionary2["name"] as? String
                     if (test?.isEmpty)! {
                     ModelData.setNameMagasin(Name: "")
