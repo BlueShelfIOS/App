@@ -23,7 +23,8 @@ class VConnection: UIViewController {
      override func viewDidLoad() {
         super.viewDidLoad()
         TxtfUser.layer.borderColor = UIColor.white.cgColor
-        TxtfPassword.layer.borderColor = UIColor.white.cgColor
+                TxtfPassword.layer.borderColor = UIColor.white.cgColor
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "bg_login2"))
     }
     
     

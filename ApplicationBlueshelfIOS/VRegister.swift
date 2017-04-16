@@ -10,32 +10,25 @@ import UIKit
 
 class VRegister: UIViewController {
 
-   
-    @IBOutlet weak var LblError: UILabel!
     @IBOutlet weak var TxtfName: UITextField!
+    
     @IBOutlet weak var TxtfSurname: UITextField!
     @IBOutlet weak var TxtfEmail: UITextField!
     @IBOutlet weak var TxtfPassword1: UITextField!
     @IBOutlet weak var TxtfPassword2: UITextField!
     var ControllerRegister = CRegister()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "bg_login2"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-   
-    @IBAction func TxtPassword1_OnClick(_ sender: Any) {
-        self.TxtfPassword1.isSecureTextEntry = true
-    }
-    
-    @IBAction func TxtPassword2_OnClick(_ sender: Any) {
-        self.TxtfPassword2.isSecureTextEntry = true
-    }
-    
-    func checkTxtInput() -> Int {
+
+   /* func checkTxtInput() -> Int {
         if (self.TxtfName.text == "")
         {
             let alert = UIAlertController(title: TITRE_POPUP_ERREUR , message: MSG_ERREUR_CHAMP_NOM_VIDE , preferredStyle: UIAlertControllerStyle.alert)
@@ -79,10 +72,7 @@ class VRegister: UIViewController {
         }
         return 1
     }
-    
-    @IBAction func BtnValidate_OnClick(_ sender: Any) {
-        
-        
+    @IBAction func BtnValidate_OnClick(_ sender: UIButton) {
         if (checkTxtInput() == 0){
             return
         }
@@ -90,7 +80,7 @@ class VRegister: UIViewController {
         if (returnCode == CODE_RETOUR_201)
         {
             let alert = UIAlertController(title: TITRE_POPUP_CONFIRMATION, message: MSG_CONFIRMATION_CREATION_COMPTE, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in RemoveInput()}))
+            alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in self.RemoveInput()}))
             self.present(alert, animated: true, completion: nil)
             
             return
@@ -108,7 +98,11 @@ class VRegister: UIViewController {
             alert.addAction(UIAlertAction(title: BTN_OK, style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
+    }
 
+    
+    
         func RemoveInput()
         {
             self.TxtfName.text = ""
@@ -117,7 +111,6 @@ class VRegister: UIViewController {
             self.TxtfPassword1.text = ""
             self.TxtfPassword2.text = ""
             
-        }
-    }
+        }*/
 }
 
