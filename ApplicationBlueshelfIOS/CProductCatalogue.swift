@@ -1,5 +1,5 @@
 //
-//  CProduct.swift
+//  CProductCatalogue.swift
 //  ApplicationBlueshelfIOS
 //
 //  Created by Antoine Millet on 30/11/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CProduct {
+class CProductCatalogue {
     
     var ID = Int();
     var Description = String()
@@ -61,6 +61,7 @@ class CProduct {
         }
         if let item = json[0] as? [String: AnyObject] {
             //print (item)
+            
             self.Price = item["price"] as! String
             self.Description = item["description"] as! String
             self.ID = item["id"] as! Int

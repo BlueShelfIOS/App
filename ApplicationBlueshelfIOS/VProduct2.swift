@@ -18,7 +18,7 @@ class VProduct2: UIViewController {
     
     
     var passedValue:String = "";
-    var ProductController = CProduct()
+    var ProductController = CProductCatalogue()
     override func viewDidLoad() {
         super.viewDidLoad()
         

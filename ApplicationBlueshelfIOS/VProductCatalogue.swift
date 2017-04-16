@@ -1,5 +1,5 @@
 //
-//  VProduct.swift
+//  VProductCatalogue.swift
 //  ApplicationBlueshelfIOS
 //
 //  Created by Antoine Millet on 30/11/2016.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class VProduct: UIViewController {
+class VProductCatalogue: UIViewController {
 
-    var passedValue:String = ""
+    var passedvalued:String = ""
     
-    var ProductController = CProduct()
+    var ProductController = CProductCatalogue()
     @IBOutlet weak var LblNameProduct: UILabel!
     @IBOutlet weak var ImgProduct: UIImageView!
     @IBOutlet weak var LblPriceProduct: UILabel!
@@ -21,8 +21,8 @@ class VProduct: UIViewController {
       override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white;
-        ProductController.RequestProduct(Product: passedValue)
-        self.LblNameProduct.text = passedValue
+        ProductController.RequestProduct(Product: passedvalued)
+        self.LblNameProduct.text = passedvalued
         self.LblPriceProduct.text = ProductController.Price
         self.LblDescriptionProduct.text = ProductController.Description
     }

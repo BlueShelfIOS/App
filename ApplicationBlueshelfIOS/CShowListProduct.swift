@@ -1,5 +1,5 @@
 //
-//  CShowGrandSon.swift
+//  CShowListProduct.swift
 //  ApplicationBlueshelfIOS
 //
 //  Created by Antoine Millet on 15/04/2017.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class CShowGrandSon {
+class CShowListProduct {
     
-    var arrayOfCellData = [cellData]()
+    var arrayOfCellData = [cellDataProduct]()
     
     
-    func getArrayOfCellData() -> [cellData] {
+    func getArrayOfCellData() -> [cellDataProduct] {
         return arrayOfCellData
     }
     
-    func RequestGetGrandSonCategorie(parent_id: String) -> Int {
-        let urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products/category?_format=json&parent_id=" + parent_id
+    func RequestGetSonCategorie(categorie: String) -> Int {
+        let urlApi = "https://dev.blueshelf.fr/app_dev.php/api/products?_format=json&category=" + categorie
         var request = URLRequest(url: URL(string: urlApi)!)
         request.httpMethod = "GET"
         request.setValue(ModelData.getToken(), forHTTPHeaderField: "X-Auth-Token")
@@ -49,7 +49,7 @@ class CShowGrandSon {
     }
     
     func Deserializer(data: Data) {
-        arrayOfCellData = [cellData]()
+        arrayOfCellData = [cellDataProduct]()
         var json: Array<Any>!
         do {
             json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? Array
@@ -60,10 +60,11 @@ class CShowGrandSon {
             var i = 0
             while (i < json.count){
                 if let item = json[i] as? [String: AnyObject] {
-                    var Obj = cellData()
+                    var Obj = cellDataProduct()
                     Obj.ImgSrc = item["image"] as! String
                     Obj.LblTitre = item["name"] as! String
                     Obj.Id = String(item["id"] as! Int)
+                    Obj.Price = item["price"] as! String
                     //Obj.parent_id = String(item["parent_id"] as! Int)
                     self.arrayOfCellData.append(Obj)
                 }
@@ -71,4 +72,5 @@ class CShowGrandSon {
             }
         }
     }
+
 }

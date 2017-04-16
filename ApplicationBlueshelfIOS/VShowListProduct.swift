@@ -1,5 +1,5 @@
 //
-//  VShowGrandSon.swift
+//  VShowListProduct.swift
 //  ApplicationBlueshelfIOS
 //
 //  Created by Antoine Millet on 15/04/2017.
@@ -8,15 +8,23 @@
 
 import UIKit
 
-class VShowGrandSon: UITableViewController {
-    
-    var ValueToPass = String()
+struct cellDataProduct{
+    var ImgSrc = String()
+    var LblTitre = String()
+    var Id = String()
+    var parent_id = String()
+    var Price = String()
+}
+
+
+class VShowListProduct: UITableViewController {
     var passedvalued = String()
-    var arrayOfCellData = [cellData]()
-    var ShowParentCat = CShowGrandSon()
+    var ValueToPass = String()
+    var arrayOfCellData = [cellDataProduct]()
+    var ShowParentCat = CShowListProduct()
     
     override func viewDidLoad() {
-        let returnCode = ShowParentCat.RequestGetGrandSonCategorie(parent_id: passedvalued)
+        let returnCode = ShowParentCat.RequestGetSonCategorie(categorie: passedvalued)
         if (returnCode == CODE_RETOUR_200)
         {
             self.arrayOfCellData = ShowParentCat.getArrayOfCellData()
@@ -48,17 +56,12 @@ class VShowGrandSon: UITableViewController {
             downloadImage(url: checkedUrl, image: cell.ImgView )
         }
         cell.LblTitle?.text = arrayOfCellData[indexPath.row].LblTitre
+        cell.Price?.text = arrayOfCellData[indexPath.row].LblTitre
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        ValueToPass = arrayOfCellData[indexPath.row].Id
-        performSegue(withIdentifier: "ShowListProduct", sender: self)
     }
     
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
@@ -71,18 +74,22 @@ class VShowGrandSon: UITableViewController {
     func downloadImage(url: URL, image: UIImageView) {
         getDataFromUrl(url: url) { (data, response, error)  in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
             DispatchQueue.main.async() { () -> Void in
                 image.image = UIImage(data: data)
             }
         }
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        ValueToPass = arrayOfCellData[indexPath.row].Id
+        performSegue(withIdentifier: "SProduct", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let viewController = segue.destination as! VShowListProduct
+        let viewController = segue.destination as! VProductCatalogue
         viewController.passedvalued = ValueToPass
     }
     
-    
-}
+
+ }
