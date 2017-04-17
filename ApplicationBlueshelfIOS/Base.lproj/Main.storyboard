@@ -1538,6 +1538,27 @@ Dimanche	     Fermé</string>
                     <view key="view" contentMode="scaleToFill" id="6Vq-RK-9xU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Ecrivez votre commentaire." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDK-IE-1gK">
+                                <rect key="frame" x="55" y="346" width="315" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-wj-hpC">
+                                <rect key="frame" x="55" y="651" width="315" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Choisir ce magasin ">
+                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnValidate_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R44-Nb-Wz7"/>
+                                    <action selector="ChooseShop_OnClick:" destination="bcX-AT-cNe" eventType="touchUpInside" id="ifY-wY-C2C"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nrc-fB-EE1">
@@ -1550,7 +1571,7 @@ Dimanche	     Fermé</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGP-k8-ary" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-272" y="1573"/>
+            <point key="canvasLocation" x="-272.46376811594206" y="1572.554347826087"/>
         </scene>
         <!--Show Categorie Parent-->
         <scene sceneID="Gpc-bK-vrY">
@@ -1845,6 +1866,24 @@ Dimanche	     Fermé</string>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-272" y="748"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aBp-GW-YG1">
+            <objects>
+                <viewController id="mtg-C8-tOj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6L-qt-GbP"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWr-Qj-Fcv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gCc-2k-Nf7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWn-db-1xW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2152" y="1045"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JUX-b0-KMS">
